@@ -1,0 +1,23 @@
+{
+  "profile": "offline-evidence-repo/release-manifest/v1",
+  "audience": "reading-room-a",
+  "files": [
+    {
+      "file": "f-9082dbb14d419c4bb927523db5d16423f5e6662b896e7cc1952474ca7151baa7.bin",
+      "size": 19,
+      "sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f"
+    }
+  ],
+  "representations": [
+    {
+      "external_code": "EXT-SHARED-0001",
+      "members": [
+        {
+          "file": "f-9082dbb14d419c4bb927523db5d16423f5e6662b896e7cc1952474ca7151baa7.bin",
+          "size": 19,
+          "sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f"
+        }
+      ]
+    }
+  ]
+}

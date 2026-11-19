@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-REP-MAIN" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>REP-MAIN</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-REP-ALIAS" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>REP-ALIAS</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-REP-SHARED" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>REP-SHARED</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-DIRECT" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-DIRECT</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-M1" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-M1</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-M2" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-M2</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-OTHER" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-OTHER</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ID="GRP-REP-MAIN" ADMID="ADM-REP-MAIN">
+      <mets:file ID="F-BS-DIRECT-0" ADMID="ADM-BS-DIRECT">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-DIRECT.bin"/>
+      </mets:file>
+      <mets:file ID="F-BS-OTHER-1" ADMID="ADM-BS-OTHER">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-OTHER.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="GRP-REP-ALIAS" ADMID="ADM-REP-ALIAS">
+      <mets:file ID="F-BS-M1-0" ADMID="ADM-BS-M1">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-M1.bin"/>
+      </mets:file>
+      <mets:file ID="F-BS-M2-1" ADMID="ADM-BS-M2">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-M2.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="GRP-REP-SHARED" ADMID="ADM-REP-SHARED">
+      <mets:file ID="F-BS-OTHER-0" ADMID="ADM-BS-OTHER">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-OTHER.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="node-main" LABEL="node-main">
+      <mets:fptr FILEID="GRP-REP-MAIN"/>
+    </mets:div>
+    <mets:div ID="node-alias" LABEL="node-alias">
+      <mets:fptr FILEID="GRP-REP-ALIAS"/>
+    </mets:div>
+    <mets:div ID="node-shared" LABEL="node-shared">
+      <mets:fptr FILEID="GRP-REP-SHARED"/>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

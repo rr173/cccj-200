@@ -1,0 +1,72 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-SEL"
+      },
+      "rel_path": "content/BS-SEL.bin",
+      "sha256": "0cc892ac4062c185edc3dbdbd19c2609a78540da5749038c55e16f7ee6b05797",
+      "size": 18
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-ALIAS"
+      },
+      "rel_path": "content/BS-ALIAS.bin",
+      "sha256": "0cc892ac4062c185edc3dbdbd19c2609a78540da5749038c55e16f7ee6b05797",
+      "size": 18
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-RSEL",
+      "id_type": "local",
+      "id_value": "RSEL",
+      "members": [
+        [
+          "local",
+          "BS-SEL"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n",
+          "node_id": "n"
+        }
+      ]
+    },
+    {
+      "filegrp": "GRP-RALIAS",
+      "id_type": "local",
+      "id_value": "RALIAS",
+      "members": [
+        [
+          "local",
+          "BS-ALIAS"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "m",
+          "node_id": "m"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "i1"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

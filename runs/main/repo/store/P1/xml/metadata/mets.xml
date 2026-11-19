@@ -58,10 +58,10 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ADMID="ADM-R1" ID="GRP-R1">
-      <mets:file ADMID="ADM-C" ID="F-R1-0">
+      <mets:file ADMID="ADM-C" ID="F-C-0">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/C.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-D" ID="F-R1-1">
+      <mets:file ADMID="ADM-D" ID="F-D-1">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/D.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
     </mets:fileGrp>

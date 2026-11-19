@@ -1,0 +1,5 @@
+{"record_type": "rules_header", "format_version": "release-rules/v1", "rules_id": "RULES-MAIN", "audience": "reading-room-a"}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BS-DIRECT"}, "action": "release"}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BS-M1"}, "action": "redact", "content_sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac", "ranges": [[1, 4]]}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BS-M2"}, "action": "redact", "content_sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac", "ranges": [[4, 5]]}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BS-OTHER"}, "action": "release"}

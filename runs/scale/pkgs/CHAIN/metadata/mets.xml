@@ -22026,7 +22026,7 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-RCHAIN" ADMID="ADM-RCHAIN">
-      <mets:file ID="F-RCHAIN-0" ADMID="ADM-O2000">
+      <mets:file ID="F-O2000-0" ADMID="ADM-O2000">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/O2000.bin"/>
       </mets:file>
     </mets:fileGrp>

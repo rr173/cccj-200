@@ -15,7 +15,7 @@ import sqlite3
 
 from .util import PKG_SEALED
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 
 def connect(repo_root):
@@ -254,6 +254,38 @@ def _create(conn):
         );
         CREATE INDEX IF NOT EXISTS idx_recon_inventory
             ON reconciliation_reports(inventory_id);
+
+        -- 离线发布：馆内计划（只增不改；内容寻址；绑定请求/规则/封包集合）--
+        CREATE TABLE IF NOT EXISTS release_plans (
+            plan_id            TEXT PRIMARY KEY,   -- 业务内容 SHA-256
+            request_id         TEXT NOT NULL,
+            audience           TEXT NOT NULL,
+            created_at         TEXT NOT NULL,
+            sealed_package_set TEXT NOT NULL,      -- JSON 排序数组（计划事实视图）
+            package_set_sha256 TEXT NOT NULL,
+            request_sha256     TEXT NOT NULL,
+            rules_sha256       TEXT NOT NULL,
+            request_bytes      INTEGER NOT NULL,
+            rules_bytes        INTEGER NOT NULL,
+            plan_path          TEXT NOT NULL,      -- 仓内相对路径（外发目录之外）
+            deliverable_count  INTEGER NOT NULL,
+            held_count         INTEGER NOT NULL,
+            blocked_count      INTEGER NOT NULL
+        );
+
+        -- 离线发布：按计划产生的外发目录登记（发布审计；不写任何外发内容）
+        CREATE TABLE IF NOT EXISTS release_deliveries (
+            delivery_no   INTEGER PRIMARY KEY AUTOINCREMENT,
+            plan_id       TEXT NOT NULL REFERENCES release_plans(plan_id),
+            delivered_at  TEXT NOT NULL,
+            target_dir    TEXT NOT NULL,
+            manifest_name TEXT NOT NULL,
+            file_count    INTEGER NOT NULL,
+            manifest_sha256 TEXT NOT NULL,
+            package_set_sha256 TEXT NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_delivery_plan
+            ON release_deliveries(plan_id);
         """
     )
     cur = conn.execute("SELECT value FROM meta WHERE key='schema_version'")
@@ -270,6 +302,14 @@ def _create(conn):
         # v1 -> v2：rep_members 主键加入 package_id（保留每个包的成员声明，
         # 以便识别“同身份不同成员集合”的事实冲突）。既有行原样保留。
         _migrate_v1_to_v2(conn)
+        conn.execute(
+            "UPDATE meta SET value=? WHERE key='schema_version'",
+            (str(SCHEMA_VERSION),),
+        )
+        conn.commit()
+    elif int(row[0]) == 2:
+        # v2 -> v3：离线发布表（release_plans / release_deliveries）。
+        # 既有谱系/对账数据原样保留，发布子系统独立建表。
         conn.execute(
             "UPDATE meta SET value=? WHERE key='schema_version'",
             (str(SCHEMA_VERSION),),

@@ -1,0 +1,116 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-DIRECT"
+      },
+      "rel_path": "content/BS-DIRECT.bin",
+      "sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+      "size": 5
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-M1"
+      },
+      "rel_path": "content/BS-M1.bin",
+      "sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+      "size": 5
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-M2"
+      },
+      "rel_path": "content/BS-M2.bin",
+      "sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+      "size": 5
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-OTHER"
+      },
+      "rel_path": "content/BS-OTHER.bin",
+      "sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f",
+      "size": 19
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-REP-MAIN",
+      "id_type": "local",
+      "id_value": "REP-MAIN",
+      "members": [
+        [
+          "local",
+          "BS-DIRECT"
+        ],
+        [
+          "local",
+          "BS-OTHER"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-main",
+          "node_id": "node-main"
+        }
+      ]
+    },
+    {
+      "filegrp": "GRP-REP-ALIAS",
+      "id_type": "local",
+      "id_value": "REP-ALIAS",
+      "members": [
+        [
+          "local",
+          "BS-M1"
+        ],
+        [
+          "local",
+          "BS-M2"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-alias",
+          "node_id": "node-alias"
+        }
+      ]
+    },
+    {
+      "filegrp": "GRP-REP-SHARED",
+      "id_type": "local",
+      "id_value": "REP-SHARED",
+      "members": [
+        [
+          "local",
+          "BS-OTHER"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-shared",
+          "node_id": "node-shared"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-X",
+    "ing-O"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

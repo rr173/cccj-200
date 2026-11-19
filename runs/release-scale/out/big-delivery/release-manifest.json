@@ -1,0 +1,23 @@
+{
+  "profile": "offline-evidence-repo/release-manifest/v1",
+  "audience": "aud-scale",
+  "files": [
+    {
+      "file": "f-cd812058c98bd0160e7b3db34a83e6803cb1472d7d862d92057bd8b03cf0d130.bin",
+      "size": 8388608,
+      "sha256": "59c859796d37ca3ee88d1aa9badcf87690d252f0b338dc2ccd3302b354c7e7cb"
+    }
+  ],
+  "representations": [
+    {
+      "external_code": "EXT-BIG-0001",
+      "members": [
+        {
+          "file": "f-cd812058c98bd0160e7b3db34a83e6803cb1472d7d862d92057bd8b03cf0d130.bin",
+          "size": 8388608,
+          "sha256": "59c859796d37ca3ee88d1aa9badcf87690d252f0b338dc2ccd3302b354c7e7cb"
+        }
+      ]
+    }
+  ]
+}

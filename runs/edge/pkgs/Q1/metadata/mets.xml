@@ -59,7 +59,7 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-RW" ADMID="ADM-RW">
-      <mets:file ID="F-RW-0" ADMID="ADM-W">
+      <mets:file ID="F-W-0" ADMID="ADM-W">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/W.bin"/>
       </mets:file>
     </mets:fileGrp>

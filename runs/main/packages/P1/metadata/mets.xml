@@ -59,10 +59,10 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-R1" ADMID="ADM-R1">
-      <mets:file ID="F-R1-0" ADMID="ADM-C">
+      <mets:file ID="F-C-0" ADMID="ADM-C">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/C.bin"/>
       </mets:file>
-      <mets:file ID="F-R1-1" ADMID="ADM-D">
+      <mets:file ID="F-D-1" ADMID="ADM-D">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/D.bin"/>
       </mets:file>
     </mets:fileGrp>

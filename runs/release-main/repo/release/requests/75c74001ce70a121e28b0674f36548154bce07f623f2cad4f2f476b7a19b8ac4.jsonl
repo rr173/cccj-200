@@ -1,0 +1,3 @@
+{"record_type": "release_header", "format_version": "release-request/v1", "request_id": "REQ-MAIN", "audience": "reading-room-a"}
+{"record_type": "representation_selection", "identifierType": "local", "identifierValue": "REP-MAIN", "external_code": "EXT-MAIN-0002"}
+{"record_type": "representation_selection", "identifierType": "local", "identifierValue": "REP-SHARED", "external_code": "EXT-SHARED-0001"}

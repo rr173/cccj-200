@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-BS-STAGE" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-STAGE</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+  </mets:structMap>
+</mets:mets>

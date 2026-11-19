@@ -20,6 +20,12 @@
   reports           列出对账报告（按清单过滤）
   report            查看报告全文及其输入绑定
   verify-report     独立校验报告文件（内容哈希 + 输入绑定，可搬迁）
+  release-plan      按请求+受众规则生成馆内离线发布计划（内容寻址、只增不改）
+  release-plans     列出馆内发布计划
+  release-show      查看馆内计划全文（逐项决定、原因与输入绑定）
+  release-publish   按确认的 plan_id 发布到全新目标目录（陈旧计划拒绝）
+  release-verify    离线校验外发目录（仅依据公开格式与清单，可搬离仓库）
+  release-deliveries 列出发布登记
 """
 from __future__ import annotations
 
@@ -32,6 +38,7 @@ from . import db as dbmod
 from . import diagnostics, export as exportmod, ingest, verify_export
 from . import inventory as invmod
 from . import reconcile as reconc
+from . import release_plan, release_publish, release_rules, verify_release
 from .util import safe_relpath, sha256_file
 
 
@@ -282,6 +289,92 @@ def cmd_verify_report(args):
         sys.exit(1)
 
 
+# ---------------------------------------------------------------------------
+# 离线发布（馆内计划 -> 确认后发布 -> 外发目录离线校验）
+# ---------------------------------------------------------------------------
+
+def cmd_release_plan(args):
+    conn = _open(args.repo)
+    try:
+        try:
+            doc, reused = release_plan.build_plan(
+                conn, args.repo, args.request, args.rules
+            )
+        except release_rules.ReleaseInputError as exc:
+            # 语法/约束错误：计划失败（区别于业务暂缓）
+            _print(exc.as_dict())
+            sys.exit(2)
+        except release_publish.PublishError as exc:
+            _print(exc.as_dict())
+            sys.exit(1)
+        _print({
+            "plan_id": doc["plan_id"],
+            "reused": reused,
+            "audience": doc["audience"],
+            "summary": doc["summary"],
+            "plan_path": conn.execute(
+                "SELECT plan_path FROM release_plans WHERE plan_id=?",
+                (doc["plan_id"],),
+            ).fetchone()["plan_path"],
+        })
+    finally:
+        conn.close()
+
+
+def cmd_release_plans(args):
+    conn = _open(args.repo)
+    try:
+        _print(release_plan.list_plans(conn))
+    finally:
+        conn.close()
+
+
+def cmd_release_show(args):
+    conn = _open(args.repo)
+    try:
+        _print(release_plan.get_plan(conn, args.repo, args.plan_id))
+    except release_plan.PlanError as exc:
+        _print({"error": "unknown_plan", "message": str(exc)})
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_release_publish(args):
+    conn = _open(args.repo)
+    try:
+        try:
+            res = release_publish.publish(
+                conn, args.repo, args.plan_id, args.target
+            )
+        except release_publish.PublishError as exc:
+            _print(exc.as_dict())
+            sys.exit(1)
+        _print(res)
+    finally:
+        conn.close()
+
+
+def cmd_release_verify(args):
+    result = verify_release.verify_release(args.release_dir)
+    _print(result)
+    if not result["ok"]:
+        sys.exit(1)
+
+
+def cmd_release_deliveries(args):
+    conn = _open(args.repo)
+    try:
+        rows = conn.execute(
+            "SELECT delivery_no,plan_id,delivered_at,target_dir,manifest_name,"
+            "file_count,manifest_sha256,package_set_sha256 "
+            "FROM release_deliveries ORDER BY delivery_no"
+        ).fetchall()
+        _print([dict(r) for r in rows])
+    finally:
+        conn.close()
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="evidrepo", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -333,6 +426,22 @@ def build_parser():
     sp.set_defaults(fn=cmd_report)
     sp = sub.add_parser("verify-report"); sp.add_argument("path")
     sp.set_defaults(fn=cmd_verify_report)
+
+    # 离线发布
+    sp = sub.add_parser("release-plan")
+    sp.add_argument("repo"); sp.add_argument("request"); sp.add_argument("rules")
+    sp.set_defaults(fn=cmd_release_plan)
+    sp = sub.add_parser("release-plans"); sp.add_argument("repo")
+    sp.set_defaults(fn=cmd_release_plans)
+    sp = sub.add_parser("release-show"); sp.add_argument("repo"); sp.add_argument("plan_id")
+    sp.set_defaults(fn=cmd_release_show)
+    sp = sub.add_parser("release-publish")
+    sp.add_argument("repo"); sp.add_argument("plan_id"); sp.add_argument("target")
+    sp.set_defaults(fn=cmd_release_publish)
+    sp = sub.add_parser("release-verify"); sp.add_argument("release_dir")
+    sp.set_defaults(fn=cmd_release_verify)
+    sp = sub.add_parser("release-deliveries"); sp.add_argument("repo")
+    sp.set_defaults(fn=cmd_release_deliveries)
     return p
 
 

@@ -1,0 +1,133 @@
+{
+  "audience": "aud-scale",
+  "contents": [
+    {
+      "alias_rule_actions": {
+        "local\u001fBIGBS": {
+          "action": "redact",
+          "source_line": 2
+        }
+      },
+      "aliases": [
+        {
+          "identifierType": "local",
+          "identifierValue": "BIGBS",
+          "package_id": "BIG"
+        }
+      ],
+      "blocked": false,
+      "bound_digests": [
+        "cbb23e6fdd591197a5b50b3ea2bd2f56958cf9cd0b632c9c23b93246406152d7"
+      ],
+      "content_sha256": "cbb23e6fdd591197a5b50b3ea2bd2f56958cf9cd0b632c9c23b93246406152d7",
+      "decision": "redact",
+      "length": 8388608,
+      "merged_redaction_ranges": [
+        [
+          65533,
+          65541
+        ],
+        [
+          196605,
+          196613
+        ]
+      ],
+      "reasons": []
+    }
+  ],
+  "created_at": "2026-11-19T23:32:49.533451+00:00",
+  "engine": "release-plan/v1",
+  "inputs": {
+    "request": {
+      "format_version": "release-request/v1",
+      "request_id": "REQ-BIG",
+      "selections": [
+        {
+          "external_code": "EXT-BIG-0001",
+          "identifierType": "local",
+          "identifierValue": "RBIG",
+          "source_line": 2
+        }
+      ],
+      "source_bytes": 255,
+      "source_lines": 2,
+      "source_sha256": "5a9964fee5b50154f2912e43dc33a4f6a858a289180a6b427e7d19bc45560ab9"
+    },
+    "rules": {
+      "format_version": "release-rules/v1",
+      "rules": [
+        {
+          "action": "redact",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BIGBS"
+          },
+          "content_sha256": "cbb23e6fdd591197a5b50b3ea2bd2f56958cf9cd0b632c9c23b93246406152d7",
+          "ranges": [
+            [
+              65533,
+              65541
+            ],
+            [
+              196605,
+              196613
+            ]
+          ],
+          "source_line": 2
+        }
+      ],
+      "rules_id": "R-BIG",
+      "source_bytes": 362,
+      "source_lines": 2,
+      "source_sha256": "c7a142441217129fcbd106a17e58411d5679f97be56dc50c01f17c8097115a28"
+    },
+    "sealed": {
+      "package_set": [
+        "BIG"
+      ],
+      "package_set_sha256": "8e08c31c4f55eb0d95c7e700f5e092eb8bc0005fe41fd5769d69ff5b7e9ced40"
+    }
+  },
+  "plan_id": "5cb4c67bdcc51757b42c9446f74042a6cb4a129c43510d90004139c51098111d",
+  "profile": "offline-evidence-repo/release-plan/v1",
+  "representations": [
+    {
+      "content_digests": [
+        "cbb23e6fdd591197a5b50b3ea2bd2f56958cf9cd0b632c9c23b93246406152d7"
+      ],
+      "decision": "deliverable",
+      "external_code": "EXT-BIG-0001",
+      "identity": {
+        "identifierType": "local",
+        "identifierValue": "RBIG"
+      },
+      "member_checks": [
+        {
+          "identity": {
+            "identifierType": "local",
+            "identifierValue": "BIGBS"
+          },
+          "origin_proven": true,
+          "reasons": [],
+          "state": "bytes_ok"
+        }
+      ],
+      "member_set_conflict": false,
+      "reasons": [],
+      "request_line": 2,
+      "sealed_packages": [
+        "BIG"
+      ]
+    }
+  ],
+  "summary": {
+    "content_blocked": 0,
+    "content_held": 0,
+    "content_redact": 1,
+    "content_release": 0,
+    "content_total": 1,
+    "deliverable": 1,
+    "held": 0,
+    "representation_total": 1
+  }
+}

@@ -150,6 +150,8 @@ class PackageBuilder:
         return self.root
 
     def _ident_of(self, value):
+        if isinstance(value, tuple):
+            return value
         t, v, _c, _d = self.objects[value]
         return (t, v)
 
@@ -259,9 +261,9 @@ class PackageBuilder:
             for i, mv in enumerate(spec["members"]):
                 mt, mva = self._ident_of(mv)
                 lines.append('      <mets:file ID="F-%s-%d" ADMID="ADM-%s">'
-                             % (value, i, mv))
+                             % (mva, i, mva))
                 lines.append('        <mets:FLocat LOCTYPE="URL" '
-                             'xlink:type="simple" xlink:href="content/%s.bin"/>' % mv)
+                             'xlink:type="simple" xlink:href="content/%s.bin"/>' % mva)
                 lines.append("      </mets:file>")
             lines.append("    </mets:fileGrp>")
         lines.append("  </mets:fileSec>")

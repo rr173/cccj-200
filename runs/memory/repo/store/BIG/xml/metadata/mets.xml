@@ -102,28 +102,28 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ADMID="ADM-RBIG" ID="GRP-RBIG">
-      <mets:file ADMID="ADM-M0" ID="F-RBIG-0">
+      <mets:file ADMID="ADM-M0" ID="F-M0-0">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M0.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M1" ID="F-RBIG-1">
+      <mets:file ADMID="ADM-M1" ID="F-M1-1">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M1.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M2" ID="F-RBIG-2">
+      <mets:file ADMID="ADM-M2" ID="F-M2-2">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M2.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M3" ID="F-RBIG-3">
+      <mets:file ADMID="ADM-M3" ID="F-M3-3">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M3.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M4" ID="F-RBIG-4">
+      <mets:file ADMID="ADM-M4" ID="F-M4-4">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M4.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M5" ID="F-RBIG-5">
+      <mets:file ADMID="ADM-M5" ID="F-M5-5">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M5.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M6" ID="F-RBIG-6">
+      <mets:file ADMID="ADM-M6" ID="F-M6-6">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M6.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
-      <mets:file ADMID="ADM-M7" ID="F-RBIG-7">
+      <mets:file ADMID="ADM-M7" ID="F-M7-7">
         <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M7.bin" xlink:type="simple"></mets:FLocat>
       </mets:file>
     </mets:fileGrp>

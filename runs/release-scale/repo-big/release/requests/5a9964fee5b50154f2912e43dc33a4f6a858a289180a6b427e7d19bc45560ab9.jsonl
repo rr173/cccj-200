@@ -1,0 +1,2 @@
+{"record_type": "release_header", "format_version": "release-request/v1", "request_id": "REQ-BIG", "audience": "aud-scale"}
+{"record_type": "representation_selection", "identifierType": "local", "identifierValue": "RBIG", "external_code": "EXT-BIG-0001"}

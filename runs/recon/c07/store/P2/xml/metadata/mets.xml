@@ -25,7 +25,7 @@
   </ns0:amdSec>
   <ns0:fileSec>
     <ns0:fileGrp ADMID="ADM-RCONF" ID="G2">
-      <ns0:file ADMID="ADM-M2" ID="F-RCONF-0">
+      <ns0:file ADMID="ADM-M2" ID="F-M2-0">
         <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M2.bin" ns2:type="simple"></ns0:FLocat>
       </ns0:file>
     </ns0:fileGrp>

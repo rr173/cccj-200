@@ -22,6 +22,11 @@ evidence_repo/
 │   ├── verify_export.py       # 独立验证器（仅标准库，不复用求值器）
 │   ├── inventory.py           # 预期馆藏清单导入（流式校验、整份事务、独立存储）
 │   ├── reconcile.py           # 预期馆藏对账（最大匹配 + 歧义语义 + 不可变报告）
+│   ├── release_rules.py       # 发布请求/受众规则严格校验（版本化 JSONL、错误分层）
+│   ├── redaction.py           # UTF-8 字节坐标遮盖（分块、字符边界、长度/哈希核对）
+│   ├── release_plan.py        # 馆内计划（sealed 视图、按内容统一落实、内容寻址）
+│   ├── release_publish.py     # 批准后发布（陈旧拒绝、互斥、原子一次性交付）
+│   ├── verify_release.py      # 外发目录离线校验器（只认公开格式，不 import 仓内模块）
 │   └── cli.py                 # 命令行入口
 └── tests/
     ├── fixtures.py            # 合成交接包构造器（不受信输入数据）
@@ -30,7 +35,10 @@ evidence_repo/
     ├── demo_memory.py         # 大成员内存/分块 I/O 测量
     ├── demo_scale.py          # 路径规模与落盘求值内存测量
     ├── demo_reconcile.py      # 预期馆藏对账验收（17 场景、86 项断言）
-    └── demo_reconcile_scale.py# 歧义双路线一致性 + 大图规模测试
+    ├── demo_reconcile_scale.py# 歧义双路线一致性 + 大图规模测试
+    ├── demo_release_main.py   # 离线发布主演练（A馆B、别名并集、staging、陈旧重做）
+    ├── demo_release_edges.py  # 发布边界（字符边界/错误分层/并发/中断/注入等 60 项）
+    └── demo_release_scale.py  # 大文件跨块遮盖 + 大量别名/区间的规模与内存
 ```
 
 ## 快速运行
@@ -45,6 +53,9 @@ python3 -I tests/demo_memory.py   # 256 MiB 成员内存测量（峰值约 2 MiB
 python3 -I tests/demo_scale.py    # 2000 节点长链：存活内存不随路径数增长
 python3 -I tests/demo_reconcile.py       # 预期馆藏对账（17 场景）
 python3 -I tests/demo_reconcile_scale.py # 歧义双路线一致 + 大图有界内存
+python3 -I tests/demo_release_main.py    # 离线发布主例（A馆B -> A****、staging、陈旧重做）
+python3 -I tests/demo_release_edges.py   # 发布边界（60 项：错误分层/字符边界/并发/中断/注入）
+python3 -I tests/demo_release_scale.py   # 64 MiB 跨块遮盖 + 2000 别名规模与峰值内存
 ```
 
 ## CLI 用法
@@ -69,7 +80,44 @@ python3 -m evidrepo.cli reconcile <repo> <inventory_id>
 python3 -m evidrepo.cli reports <repo> [--inventory <inventory_id>]
 python3 -m evidrepo.cli report <repo> <report_id>
 python3 -m evidrepo.cli verify-report <report.json>
+
+# 离线发布（馆内计划 -> 批准后发布 -> 外发目录离线校验）
+python3 -m evidrepo.cli release-plan <repo> <request.jsonl> <rules.jsonl>
+python3 -m evidrepo.cli release-plans <repo>
+python3 -m evidrepo.cli release-show <repo> <plan_id>
+python3 -m evidrepo.cli release-publish <repo> <plan_id> <new_target_dir>
+python3 -m evidrepo.cli release-verify <release_dir>   # 可在搬离仓库后运行
+python3 -m evidrepo.cli release-deliveries <repo>
 ```
+
+## 离线发布（offline release，profile §15）
+
+把封存馆藏按受众规则转成可直接交给阅览室的副本目录，原件与既有证明仍留馆内。
+
+- **两个版本化输入**：发布请求 `release-request/v1`（受众 + 按精确
+  `(identifierType, identifierValue)` 选表示 + 人工批准的 ASCII 安全外部代号）
+  与受众规则 `release-rules/v1`（按 bitstream 身份给 release/hold/redact；
+  redact 绑定原件 SHA-256 与原始 UTF-8 字节半开区间）。
+- **错误分层**：语法/版本/重复/冲突/非法区间/未知动作是**计划失败**
+  （整份拒绝，退出码 2）；缺规则与 hold 是**业务暂缓**（计划照常生成、
+  逐项记原因）；遮盖无法成立记为 blocked，阻止可发布结果并定位失败对象。
+- **按内容统一落实**：对计划涉及的每个内容摘要，纳入 sealed 视图中所有
+  关联该摘要的 bytes_ok 身份（含未选表示别名）。任一别名缺规则/hold，
+  内容整体暂缓；否则取全部 redact 区间并集，生成一份共同遮盖副本；全部
+  release 才放行原字节。
+- **遮盖**：先逐条校验区间非空、未越界、两端在 UTF-8 字符边界（被覆盖的
+  非法区间也会被发现），再以等量 `*` 替换并集；分块执行，跨块字符/区间
+  正确；发布时实际重算长度与 SHA-256。
+- **交付顺序**：发布只认确认的 plan_id 并复核 sealed 包集合；交付前有新包
+  封存即判陈旧拒绝。临时目录构建 + 写事务内复核 + 一次性原子改名；中断后
+  正式路径只能不存在或完整可校验；目标已存在则保留，同路径并发最多一个成功。
+- **最小披露**：外发目录仅 `release-manifest.json` + `payloads/f-<64hex>.bin`；
+  清单只用外部代号、生成文件名和**交付字节**的 length/sha256，不含馆内
+  身份、路径、原件摘要（作为文件名）、规则、原因、XML、事件、证明或计划。
+  生成文件名是 plan_id 键控的 HMAC，不取自馆内身份或原件摘要。
+- **离线校验**：`release-verify` 不 import 仓内模块，搬离仓库后只按公开
+  格式校验引用、文件集合与实际字节，拒绝多余/缺失文件、路径逃逸、符号链接
+  与摘要错误；规则是否落实由馆内独立验收判断。
 
 ## 核心设计要点
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-RSEL" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RSEL</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-RALIAS" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RALIAS</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-SEL" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-SEL</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-ALIAS" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-ALIAS</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ID="GRP-RSEL" ADMID="ADM-RSEL">
+      <mets:file ID="F-BS-SEL-0" ADMID="ADM-BS-SEL">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-SEL.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="GRP-RALIAS" ADMID="ADM-RALIAS">
+      <mets:file ID="F-BS-ALIAS-0" ADMID="ADM-BS-ALIAS">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-ALIAS.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="n" LABEL="n">
+      <mets:fptr FILEID="GRP-RSEL"/>
+    </mets:div>
+    <mets:div ID="m" LABEL="m">
+      <mets:fptr FILEID="GRP-RALIAS"/>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

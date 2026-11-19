@@ -1,0 +1,2 @@
+{"record_type": "rules_header", "format_version": "release-rules/v1", "rules_id": "RULES-E", "audience": "aud-E"}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BS-SEL"}, "action": "release"}

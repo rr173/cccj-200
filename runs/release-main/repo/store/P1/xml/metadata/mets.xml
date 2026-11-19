@@ -1,0 +1,115 @@
+<ns0:mets xmlns:ns0="http://www.loc.gov/METS/">
+  <ns0:amdSec>
+    <ns0:mdWrap ID="ADM-REP-MAIN" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>REP-MAIN</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-REP-ALIAS" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>REP-ALIAS</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-REP-SHARED" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>REP-SHARED</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-DIRECT" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-DIRECT</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-M1" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-M1</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-M2" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-M2</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-OTHER" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-OTHER</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+  </ns0:amdSec>
+  <ns0:fileSec>
+    <ns0:fileGrp ADMID="ADM-REP-MAIN" ID="GRP-REP-MAIN">
+      <ns0:file ADMID="ADM-BS-DIRECT" ID="F-BS-DIRECT-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-DIRECT.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+      <ns0:file ADMID="ADM-BS-OTHER" ID="F-BS-OTHER-1">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-OTHER.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+    <ns0:fileGrp ADMID="ADM-REP-ALIAS" ID="GRP-REP-ALIAS">
+      <ns0:file ADMID="ADM-BS-M1" ID="F-BS-M1-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-M1.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+      <ns0:file ADMID="ADM-BS-M2" ID="F-BS-M2-1">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-M2.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+    <ns0:fileGrp ADMID="ADM-REP-SHARED" ID="GRP-REP-SHARED">
+      <ns0:file ADMID="ADM-BS-OTHER" ID="F-BS-OTHER-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-OTHER.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+  </ns0:fileSec>
+  <ns0:structMap TYPE="physical">
+    <ns0:div ID="node-main" LABEL="node-main">
+      <ns0:fptr FILEID="GRP-REP-MAIN"></ns0:fptr>
+    </ns0:div>
+    <ns0:div ID="node-alias" LABEL="node-alias">
+      <ns0:fptr FILEID="GRP-REP-ALIAS"></ns0:fptr>
+    </ns0:div>
+    <ns0:div ID="node-shared" LABEL="node-shared">
+      <ns0:fptr FILEID="GRP-REP-SHARED"></ns0:fptr>
+    </ns0:div>
+  </ns0:structMap>
+</ns0:mets>

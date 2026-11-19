@@ -36,12 +36,12 @@
   </ns0:amdSec>
   <ns0:fileSec>
     <ns0:fileGrp ADMID="ADM-RWANT" ID="GRP-RWANT">
-      <ns0:file ADMID="ADM-M" ID="F-RWANT-0">
+      <ns0:file ADMID="ADM-M" ID="F-M-0">
         <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
       </ns0:file>
     </ns0:fileGrp>
     <ns0:fileGrp ADMID="ADM-REXTRA" ID="G2">
-      <ns0:file ADMID="ADM-M" ID="F-REXTRA-0">
+      <ns0:file ADMID="ADM-M" ID="F-M-0">
         <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
       </ns0:file>
     </ns0:fileGrp>

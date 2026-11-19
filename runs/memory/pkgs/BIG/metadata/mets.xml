@@ -103,28 +103,28 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-RBIG" ADMID="ADM-RBIG">
-      <mets:file ID="F-RBIG-0" ADMID="ADM-M0">
+      <mets:file ID="F-M0-0" ADMID="ADM-M0">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M0.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-1" ADMID="ADM-M1">
+      <mets:file ID="F-M1-1" ADMID="ADM-M1">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M1.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-2" ADMID="ADM-M2">
+      <mets:file ID="F-M2-2" ADMID="ADM-M2">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M2.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-3" ADMID="ADM-M3">
+      <mets:file ID="F-M3-3" ADMID="ADM-M3">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M3.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-4" ADMID="ADM-M4">
+      <mets:file ID="F-M4-4" ADMID="ADM-M4">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M4.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-5" ADMID="ADM-M5">
+      <mets:file ID="F-M5-5" ADMID="ADM-M5">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M5.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-6" ADMID="ADM-M6">
+      <mets:file ID="F-M6-6" ADMID="ADM-M6">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M6.bin"/>
       </mets:file>
-      <mets:file ID="F-RBIG-7" ADMID="ADM-M7">
+      <mets:file ID="F-M7-7" ADMID="ADM-M7">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M7.bin"/>
       </mets:file>
     </mets:fileGrp>

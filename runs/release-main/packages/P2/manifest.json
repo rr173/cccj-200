@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-STAGE"
+      },
+      "rel_path": "content/BS-STAGE.bin",
+      "sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+      "size": 5
+    }
+  ],
+  "package_id": "P2",
+  "representations": [],
+  "trusted_ingest_events": [
+    "ing-S"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

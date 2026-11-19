@@ -48,17 +48,17 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="G0" ADMID="ADM-RA">
-      <mets:file ID="F-RA-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>
     <mets:fileGrp ID="G1" ADMID="ADM-RB">
-      <mets:file ID="F-RB-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>
     <mets:fileGrp ID="G2" ADMID="ADM-RC">
-      <mets:file ID="F-RC-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>

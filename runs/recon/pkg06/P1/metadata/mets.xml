@@ -26,7 +26,7 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-SAME" ADMID="ADM-SAME">
-      <mets:file ID="F-SAME-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>

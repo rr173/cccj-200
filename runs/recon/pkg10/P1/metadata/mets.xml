@@ -37,12 +37,12 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp ID="GRP-RWANT" ADMID="ADM-RWANT">
-      <mets:file ID="F-RWANT-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>
     <mets:fileGrp ID="G2" ADMID="ADM-REXTRA">
-      <mets:file ID="F-REXTRA-0" ADMID="ADM-M">
+      <mets:file ID="F-M-0" ADMID="ADM-M">
         <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
       </mets:file>
     </mets:fileGrp>

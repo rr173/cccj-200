@@ -1,0 +1,126 @@
+{
+  "audience": "aud-E",
+  "contents": [
+    {
+      "alias_rule_actions": {
+        "local\u001fBS-ALIAS": {
+          "action": null,
+          "source_line": null
+        },
+        "local\u001fBS-SEL": {
+          "action": "release",
+          "source_line": 2
+        }
+      },
+      "aliases": [
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-ALIAS",
+          "package_id": "P1"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-SEL",
+          "package_id": "P1"
+        }
+      ],
+      "blocked": false,
+      "bound_digests": [],
+      "content_sha256": "0cc892ac4062c185edc3dbdbd19c2609a78540da5749038c55e16f7ee6b05797",
+      "decision": "held",
+      "length": 18,
+      "merged_redaction_ranges": [],
+      "reasons": [
+        "alias_bitstream_without_rule: local/BS-ALIAS"
+      ]
+    }
+  ],
+  "created_at": "2026-11-19T23:32:47.493955+00:00",
+  "engine": "release-plan/v1",
+  "inputs": {
+    "request": {
+      "format_version": "release-request/v1",
+      "request_id": "REQ-E",
+      "selections": [
+        {
+          "external_code": "EXT-1",
+          "identifierType": "local",
+          "identifierValue": "RSEL",
+          "source_line": 2
+        }
+      ],
+      "source_bytes": 242,
+      "source_lines": 2,
+      "source_sha256": "03cc9f341ad53da2adaf93de4ddc9bcb23394a4afe8905b6cb5481b6b7c5d03d"
+    },
+    "rules": {
+      "format_version": "release-rules/v1",
+      "rules": [
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-SEL"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 2
+        }
+      ],
+      "rules_id": "RULES-E",
+      "source_bytes": 230,
+      "source_lines": 2,
+      "source_sha256": "050542b95a775c60c099e7a4ded6e0dd101e6f7dca49673e7813e3c5f18d06dd"
+    },
+    "sealed": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "plan_id": "4be51f186b9e2ec2c3a455e2ecfb29aa783fe2fbf42612d33018b9b46fb52f13",
+  "profile": "offline-evidence-repo/release-plan/v1",
+  "representations": [
+    {
+      "content_digests": [
+        "0cc892ac4062c185edc3dbdbd19c2609a78540da5749038c55e16f7ee6b05797"
+      ],
+      "decision": "held",
+      "external_code": "EXT-1",
+      "identity": {
+        "identifierType": "local",
+        "identifierValue": "RSEL"
+      },
+      "member_checks": [
+        {
+          "identity": {
+            "identifierType": "local",
+            "identifierValue": "BS-SEL"
+          },
+          "origin_proven": true,
+          "reasons": [],
+          "state": "bytes_ok"
+        }
+      ],
+      "member_set_conflict": false,
+      "reasons": [
+        "content 0cc892ac4062c185edc3dbdbd19c2609a78540da5749038c55e16f7ee6b05797 not publishable: alias_bitstream_without_rule: local/BS-ALIAS"
+      ],
+      "request_line": 2,
+      "sealed_packages": [
+        "P1"
+      ]
+    }
+  ],
+  "summary": {
+    "content_blocked": 0,
+    "content_held": 1,
+    "content_redact": 0,
+    "content_release": 0,
+    "content_total": 1,
+    "deliverable": 0,
+    "held": 1,
+    "representation_total": 1
+  }
+}

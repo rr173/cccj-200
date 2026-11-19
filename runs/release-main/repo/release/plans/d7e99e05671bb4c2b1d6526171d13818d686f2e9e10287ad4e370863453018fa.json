@@ -1,0 +1,210 @@
+{
+  "audience": "reading-room-a",
+  "contents": [
+    {
+      "alias_rule_actions": {
+        "local\u001fBS-OTHER": {
+          "action": "release",
+          "source_line": 5
+        }
+      },
+      "aliases": [
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-OTHER",
+          "package_id": "P1"
+        }
+      ],
+      "blocked": false,
+      "bound_digests": [],
+      "content_sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f",
+      "decision": "release",
+      "length": 19,
+      "merged_redaction_ranges": [],
+      "reasons": []
+    },
+    {
+      "alias_rule_actions": {
+        "local\u001fBS-DIRECT": {
+          "action": "release",
+          "source_line": 2
+        },
+        "local\u001fBS-M1": {
+          "action": "redact",
+          "source_line": 3
+        },
+        "local\u001fBS-M2": {
+          "action": "redact",
+          "source_line": 4
+        }
+      },
+      "aliases": [
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-DIRECT",
+          "package_id": "P1"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-M1",
+          "package_id": "P1"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-M2",
+          "package_id": "P1"
+        }
+      ],
+      "blocked": false,
+      "bound_digests": [
+        "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac"
+      ],
+      "content_sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+      "decision": "redact",
+      "length": 5,
+      "merged_redaction_ranges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "reasons": []
+    }
+  ],
+  "created_at": "2026-11-19T23:32:46.794682+00:00",
+  "engine": "release-plan/v1",
+  "inputs": {
+    "request": {
+      "format_version": "release-request/v1",
+      "request_id": "REQ-MAIN",
+      "selections": [
+        {
+          "external_code": "EXT-MAIN-0001",
+          "identifierType": "local",
+          "identifierValue": "REP-MAIN",
+          "source_line": 2
+        }
+      ],
+      "source_bytes": 266,
+      "source_lines": 2,
+      "source_sha256": "48d7ddb58f24cadf19f7e61fceea2bf55d949771880531195068a77552f0bb46"
+    },
+    "rules": {
+      "format_version": "release-rules/v1",
+      "rules": [
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-DIRECT"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 2
+        },
+        {
+          "action": "redact",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-M1"
+          },
+          "content_sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+          "ranges": [
+            [
+              1,
+              4
+            ]
+          ],
+          "source_line": 3
+        },
+        {
+          "action": "redact",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-M2"
+          },
+          "content_sha256": "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac",
+          "ranges": [
+            [
+              4,
+              5
+            ]
+          ],
+          "source_line": 4
+        },
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-OTHER"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 5
+        }
+      ],
+      "rules_id": "RULES-MAIN",
+      "source_bytes": 803,
+      "source_lines": 5,
+      "source_sha256": "a1d12b04f3fbdcf678476004b30f1203b18a852162704104918e04bb7a462567"
+    },
+    "sealed": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "plan_id": "d7e99e05671bb4c2b1d6526171d13818d686f2e9e10287ad4e370863453018fa",
+  "profile": "offline-evidence-repo/release-plan/v1",
+  "representations": [
+    {
+      "content_digests": [
+        "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f",
+        "fd5baf88c8f84d032ba8a115c315509f74f2dd6359b9fb2f1875f4bd7410e2ac"
+      ],
+      "decision": "deliverable",
+      "external_code": "EXT-MAIN-0001",
+      "identity": {
+        "identifierType": "local",
+        "identifierValue": "REP-MAIN"
+      },
+      "member_checks": [
+        {
+          "identity": {
+            "identifierType": "local",
+            "identifierValue": "BS-DIRECT"
+          },
+          "origin_proven": true,
+          "reasons": [],
+          "state": "bytes_ok"
+        },
+        {
+          "identity": {
+            "identifierType": "local",
+            "identifierValue": "BS-OTHER"
+          },
+          "origin_proven": true,
+          "reasons": [],
+          "state": "bytes_ok"
+        }
+      ],
+      "member_set_conflict": false,
+      "reasons": [],
+      "request_line": 2,
+      "sealed_packages": [
+        "P1"
+      ]
+    }
+  ],
+  "summary": {
+    "content_blocked": 0,
+    "content_held": 0,
+    "content_redact": 1,
+    "content_release": 1,
+    "content_total": 2,
+    "deliverable": 1,
+    "held": 0,
+    "representation_total": 1
+  }
+}

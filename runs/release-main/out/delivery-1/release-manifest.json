@@ -1,0 +1,33 @@
+{
+  "profile": "offline-evidence-repo/release-manifest/v1",
+  "audience": "reading-room-a",
+  "files": [
+    {
+      "file": "f-220723d9d09b462263896c11537466d0b5e8d1e9842a0ad9985f4103b3e6f7f5.bin",
+      "size": 5,
+      "sha256": "f662a77bab1645f0e9e5e9ecb1b2a6f693e93134e32ba0b604b0576cbbede238"
+    },
+    {
+      "file": "f-7f9c2eaf17ffe1ec2438efa873b1f0dc599a61f66a25c8ac475086342c2631ee.bin",
+      "size": 19,
+      "sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f"
+    }
+  ],
+  "representations": [
+    {
+      "external_code": "EXT-MAIN-0001",
+      "members": [
+        {
+          "file": "f-220723d9d09b462263896c11537466d0b5e8d1e9842a0ad9985f4103b3e6f7f5.bin",
+          "size": 5,
+          "sha256": "f662a77bab1645f0e9e5e9ecb1b2a6f693e93134e32ba0b604b0576cbbede238"
+        },
+        {
+          "file": "f-7f9c2eaf17ffe1ec2438efa873b1f0dc599a61f66a25c8ac475086342c2631ee.bin",
+          "size": 19,
+          "sha256": "4007c352e4babc69fc36574dafdc49018f518826e31d6af9773ee69b7392724f"
+        }
+      ]
+    }
+  ]
+}
