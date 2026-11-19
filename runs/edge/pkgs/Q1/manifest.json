@@ -1,0 +1,75 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "X"
+      },
+      "rel_path": "content/X.bin",
+      "sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881",
+      "size": 1
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "Y"
+      },
+      "rel_path": "content/Y.bin",
+      "sha256": "a1fce4363854ff888cff4b8e7875d600c2682390412a8cf79b37d0b11148b0fa",
+      "size": 1
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "Z"
+      },
+      "rel_path": "content/Z.bin",
+      "sha256": "594e519ae499312b29433b7dd8a97ff068defcba9755b6d5d00e84c524d67b06",
+      "size": 1
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "W"
+      },
+      "rel_path": "content/W.bin",
+      "sha256": "50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326",
+      "size": 1
+    }
+  ],
+  "package_id": "Q1",
+  "representations": [
+    {
+      "filegrp": "GRP-RW",
+      "id_type": "local",
+      "id_value": "RW",
+      "members": [
+        [
+          "local",
+          "W"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n",
+          "node_id": "n"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-X",
+    "ing-Y",
+    "ing-Z"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

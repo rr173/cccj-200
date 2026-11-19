@@ -1,0 +1,4 @@
+{"record_type": "inventory_header", "format_version": "expected-inventory/v1", "inventory_id": "c17", "batch_note": "test batch"}
+{"record_type": "obligation", "inventory_id": "c17", "item_id": "ITEM-0000", "obligation_id": "L-bitstream", "acceptable_representations": [{"identifierType": "local", "identifierValue": "M"}]}
+{"record_type": "obligation", "inventory_id": "c17", "item_id": "ITEM-0001", "obligation_id": "L-node", "acceptable_representations": [{"identifierType": "mets", "identifierValue": "n1"}]}
+{"record_type": "obligation", "inventory_id": "c17", "item_id": "ITEM-0002", "obligation_id": "L-rep", "acceptable_representations": [{"identifierType": "local", "identifierValue": "RA"}]}

@@ -1,0 +1,57 @@
+<ns0:mets xmlns:ns0="http://www.loc.gov/METS/">
+  <ns0:amdSec>
+    <ns0:mdWrap ID="ADM-RA" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>RA</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-RB" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>RB</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-M" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>M</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+  </ns0:amdSec>
+  <ns0:fileSec>
+    <ns0:fileGrp ADMID="ADM-RA" ID="G-A">
+      <ns0:file ADMID="ADM-M" ID="F-RA-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+    <ns0:fileGrp ADMID="ADM-RB" ID="G-B">
+      <ns0:file ADMID="ADM-M" ID="F-RB-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+  </ns0:fileSec>
+  <ns0:structMap TYPE="physical">
+    <ns0:div ID="n-A" LABEL="n-A">
+      <ns0:fptr FILEID="G-A"></ns0:fptr>
+    </ns0:div>
+    <ns0:div ID="n-B" LABEL="n-B">
+      <ns0:fptr FILEID="G-B"></ns0:fptr>
+    </ns0:div>
+  </ns0:structMap>
+</ns0:mets>

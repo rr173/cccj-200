@@ -1,0 +1,32 @@
+<ns0:premis xmlns:ns0="http://www.loc.gov/premis/v3" version="3.0">
+  <ns0:object>
+    <ns0:objectIdentifier>
+      <ns0:objectIdentifierType>local</ns0:objectIdentifierType>
+      <ns0:objectIdentifierValue>M</ns0:objectIdentifierValue>
+    </ns0:objectIdentifier>
+      <ns0:objectCategory>bitstream</ns0:objectCategory>
+  </ns0:object>
+  <ns0:object>
+    <ns0:objectIdentifier>
+      <ns0:objectIdentifierType>local</ns0:objectIdentifierType>
+      <ns0:objectIdentifierValue>RSEALED</ns0:objectIdentifierValue>
+    </ns0:objectIdentifier>
+      <ns0:objectCategory>representation</ns0:objectCategory>
+  </ns0:object>
+  <ns0:event>
+    <ns0:eventIdentifier>
+      <ns0:eventIdentifierType>local</ns0:eventIdentifierType>
+      <ns0:eventIdentifierValue>ing-M</ns0:eventIdentifierValue>
+    </ns0:eventIdentifier>
+    <ns0:eventType>ingest</ns0:eventType>
+    <ns0:eventDateTime>2026-01-01T00:00:00Z</ns0:eventDateTime>
+    <ns0:eventOutcomeInformation>
+      <ns0:eventOutcome>success</ns0:eventOutcome>
+    </ns0:eventOutcomeInformation>
+    <ns0:linkingObjectIdentifier>
+      <ns0:linkingObjectIdentifierType>local</ns0:linkingObjectIdentifierType>
+      <ns0:linkingObjectIdentifierValue>M</ns0:linkingObjectIdentifierValue>
+      <ns0:linkingObjectRole>output</ns0:linkingObjectRole>
+    </ns0:linkingObjectIdentifier>
+  </ns0:event>
+</ns0:premis>

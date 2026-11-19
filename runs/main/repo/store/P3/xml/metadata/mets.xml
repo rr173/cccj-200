@@ -1,0 +1,30 @@
+<mets:mets xmlns:mets="http://www.loc.gov/METS/">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-A" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>A</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-C" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>C</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+  </mets:structMap>
+</mets:mets>

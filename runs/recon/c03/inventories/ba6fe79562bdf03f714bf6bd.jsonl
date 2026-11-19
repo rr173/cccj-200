@@ -1,0 +1,3 @@
+{"record_type": "inventory_header", "format_version": "expected-inventory/v1", "inventory_id": "c03", "batch_note": "test batch"}
+{"record_type": "obligation", "inventory_id": "c03", "item_id": "ITEM-0000", "obligation_id": "L1", "acceptable_representations": [{"identifierType": "local", "identifierValue": "R-NOPE1"}]}
+{"record_type": "obligation", "inventory_id": "c03", "item_id": "ITEM-0001", "obligation_id": "L2", "acceptable_representations": [{"identifierType": "local", "identifierValue": "R-NOPE2"}, {"identifierType": "local", "identifierValue": "R-NOPE3"}]}

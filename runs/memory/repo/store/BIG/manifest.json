@@ -1,0 +1,144 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M0"
+      },
+      "rel_path": "content/M0.bin",
+      "sha256": "bfc09584b614c476a65abaff3f1f8e8364e9b2f2aedadca8992ec2155e2d4ac4",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M1"
+      },
+      "rel_path": "content/M1.bin",
+      "sha256": "1be4e3fbae3e09dde7d0764a0c1508c0f5762a7652e3bf3ecc3542b1ff72b5c9",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M2"
+      },
+      "rel_path": "content/M2.bin",
+      "sha256": "640be1250e8aa4718240ce8c29f0e0d8bf1bb5adc8691aa5019346738adb9cc6",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M3"
+      },
+      "rel_path": "content/M3.bin",
+      "sha256": "1518f8da823e6604284052f255bf3edceb2e3a78f04c0ee3f28e650f7f86119f",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M4"
+      },
+      "rel_path": "content/M4.bin",
+      "sha256": "0bfd9e862240d92a05879e171e8aba94bb392fcfa8edd0ef99575b77fdb474bd",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M5"
+      },
+      "rel_path": "content/M5.bin",
+      "sha256": "3e2609265c1b0fa09d6ffffc92b12c713ae397d4edf6c2c995c925fdecdd88c8",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M6"
+      },
+      "rel_path": "content/M6.bin",
+      "sha256": "bbc278d1ae147a28b9718aaaeefdd2a14b97627a63f5e9d038e088ac24c06009",
+      "size": 39146842
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M7"
+      },
+      "rel_path": "content/M7.bin",
+      "sha256": "855ebe4d31b4662e798c8f52abce238cb6966153b9df8b4e7113d747f75bcdec",
+      "size": 39146842
+    }
+  ],
+  "package_id": "BIG",
+  "representations": [
+    {
+      "filegrp": "GRP-RBIG",
+      "id_type": "local",
+      "id_value": "RBIG",
+      "members": [
+        [
+          "local",
+          "M0"
+        ],
+        [
+          "local",
+          "M1"
+        ],
+        [
+          "local",
+          "M2"
+        ],
+        [
+          "local",
+          "M3"
+        ],
+        [
+          "local",
+          "M4"
+        ],
+        [
+          "local",
+          "M5"
+        ],
+        [
+          "local",
+          "M6"
+        ],
+        [
+          "local",
+          "M7"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "big-node",
+          "node_id": "big-node"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-M0",
+    "ing-M1",
+    "ing-M2",
+    "ing-M3",
+    "ing-M4",
+    "ing-M5",
+    "ing-M6",
+    "ing-M7"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

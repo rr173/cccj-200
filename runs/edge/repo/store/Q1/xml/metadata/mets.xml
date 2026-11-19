@@ -1,0 +1,71 @@
+<mets:mets xmlns:mets="http://www.loc.gov/METS/">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-RW" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RW</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-X" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>X</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-Y" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>Y</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-Z" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>Z</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-W" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>W</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ADMID="ADM-RW" ID="GRP-RW">
+      <mets:file ADMID="ADM-W" ID="F-RW-0">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/W.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="n" LABEL="n">
+      <mets:fptr FILEID="GRP-RW"></mets:fptr>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

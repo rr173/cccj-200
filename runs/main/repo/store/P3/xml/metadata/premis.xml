@@ -1,0 +1,37 @@
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" version="3.0">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>A</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>bitstream</premis:objectCategory>
+  </premis:object>
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>C</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>bitstream</premis:objectCategory>
+  </premis:object>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>H</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>migration</premis:eventType>
+    <premis:eventDateTime>2026-01-01T00:00:00Z</premis:eventDateTime>
+    <premis:eventOutcomeInformation>
+      <premis:eventOutcome>success</premis:eventOutcome>
+    </premis:eventOutcomeInformation>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>A</premis:linkingObjectIdentifierValue>
+      <premis:linkingObjectRole>input</premis:linkingObjectRole>
+    </premis:linkingObjectIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>C</premis:linkingObjectIdentifierValue>
+      <premis:linkingObjectRole>output</premis:linkingObjectRole>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+</premis:premis>

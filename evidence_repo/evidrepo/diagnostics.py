@@ -185,12 +185,11 @@ def evaluate_representation(conn, rep_id_type, rep_id_value):
     """
     rows = conn.execute(
         """
-        SELECT DISTINCT member_type, member_value, MIN(ord) AS ord
+        SELECT DISTINCT member_type, member_value
         FROM rep_members
         WHERE rep_id_type=? AND rep_id_value=?
           AND package_id IN (SELECT package_id FROM packages WHERE state='sealed')
-        GROUP BY member_type, member_value
-        ORDER BY ord, member_type, member_value
+        ORDER BY member_type, member_value
         """,
         (rep_id_type, rep_id_value),
     ).fetchall()

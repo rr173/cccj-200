@@ -1,0 +1,16 @@
+<ns0:premis xmlns:ns0="http://www.loc.gov/premis/v3" version="3.0">
+  <ns0:object>
+    <ns0:objectIdentifier>
+      <ns0:objectIdentifierType>local</ns0:objectIdentifierType>
+      <ns0:objectIdentifierValue>M</ns0:objectIdentifierValue>
+    </ns0:objectIdentifier>
+      <ns0:objectCategory>bitstream</ns0:objectCategory>
+  </ns0:object>
+  <ns0:object>
+    <ns0:objectIdentifier>
+      <ns0:objectIdentifierType>local</ns0:objectIdentifierType>
+      <ns0:objectIdentifierValue>RUP</ns0:objectIdentifierValue>
+    </ns0:objectIdentifier>
+      <ns0:objectCategory>representation</ns0:objectCategory>
+  </ns0:object>
+</ns0:premis>

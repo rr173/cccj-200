@@ -1,0 +1,57 @@
+<ns0:mets xmlns:ns0="http://www.loc.gov/METS/">
+  <ns0:amdSec>
+    <ns0:mdWrap ID="ADM-RWANT" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>RWANT</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-REXTRA" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>REXTRA</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-M" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>M</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+  </ns0:amdSec>
+  <ns0:fileSec>
+    <ns0:fileGrp ADMID="ADM-RWANT" ID="GRP-RWANT">
+      <ns0:file ADMID="ADM-M" ID="F-RWANT-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+    <ns0:fileGrp ADMID="ADM-REXTRA" ID="G2">
+      <ns0:file ADMID="ADM-M" ID="F-REXTRA-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/M.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+  </ns0:fileSec>
+  <ns0:structMap TYPE="physical">
+    <ns0:div ID="n1" LABEL="n1">
+      <ns0:fptr FILEID="GRP-RWANT"></ns0:fptr>
+    </ns0:div>
+    <ns0:div ID="n2" LABEL="n2">
+      <ns0:fptr FILEID="G2"></ns0:fptr>
+    </ns0:div>
+  </ns0:structMap>
+</ns0:mets>

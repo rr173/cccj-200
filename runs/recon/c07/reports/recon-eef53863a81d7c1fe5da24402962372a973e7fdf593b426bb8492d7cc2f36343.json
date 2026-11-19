@@ -1,0 +1,106 @@
+{
+  "ambiguous_edges": [],
+  "ambiguous_obligations": [],
+  "assignments": [
+    {
+      "identity_conflict": {
+        "details": {
+          "representation_member_set_mismatch": {
+            "packages": [
+              "P1",
+              "P2"
+            ]
+          }
+        },
+        "kinds": [
+          "representation_member_set_mismatch"
+        ]
+      },
+      "item_id": "ITEM-0000",
+      "may_change_between_maximum_assignments": false,
+      "obligation_id": "L1",
+      "package_id": null,
+      "package_ids": [
+        "P1",
+        "P2"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RCONF"
+      },
+      "source_line": 2,
+      "stable_across_all_maximum_assignments": true
+    }
+  ],
+  "content_sha256": "eef53863a81d7c1fe5da24402962372a973e7fdf593b426bb8492d7cc2f36343",
+  "engine": "reconciliation/v1",
+  "extra_representations": [],
+  "generated_at": "2026-11-19T17:46:36.527035+00:00",
+  "identity_conflicts": [
+    {
+      "details": {
+        "representation_member_set_mismatch": {
+          "packages": [
+            "P1",
+            "P2"
+          ]
+        }
+      },
+      "kinds": [
+        "representation_member_set_mismatch"
+      ],
+      "package_ids": [
+        "P1",
+        "P2"
+      ],
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RCONF"
+      }
+    }
+  ],
+  "inputs": {
+    "inventory": {
+      "format_version": "expected-inventory/v1",
+      "inventory_id": "c07",
+      "item_count": 1,
+      "obligation_count": 1,
+      "source_bytes": 319,
+      "source_sha256": "79a79a8780480919ab704cea58f2c6a6c53a7deb352e1c34edb86c99849f71da"
+    },
+    "sealed": {
+      "package_set": [
+        "P1",
+        "P2"
+      ],
+      "package_set_sha256": "cd5da3b5f76b307698e0ad42dac8bcdfb7cca45d492b7c5c278993fd982b6990"
+    }
+  },
+  "profile": "offline-evidence-repo/reconciliation/v1",
+  "report_id": "eef53863a81d7c1fe5da24402962372a973e7fdf593b426bb8492d7cc2f36343",
+  "semantics": {
+    "actual_side": "sealed representation identities only",
+    "ambiguity": "alternating_reachability_plus_scc",
+    "identity": "identifierType+identifierValue exact tuple",
+    "matching": "maximum_one_to_one_bipartite",
+    "quality": "inherited from existing provenance/bytes evaluator; never promoted by reconciliation"
+  },
+  "summary": {
+    "actual_representation_identities": 1,
+    "always_satisfied": 1,
+    "ambiguous": 0,
+    "ambiguous_edges": 0,
+    "extra": 0,
+    "identity_conflicts": 1,
+    "maximum_matching_size": 1,
+    "obligation_total": 1,
+    "satisfiable_in_some_maximum_assignment": 1,
+    "satisfied": 1,
+    "unsatisfied": 0
+  },
+  "unsatisfied_obligations": []
+}

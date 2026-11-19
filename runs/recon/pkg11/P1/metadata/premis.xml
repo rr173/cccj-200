@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" version="3.0">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>M</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>bitstream</premis:objectCategory>
+  </premis:object>
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>RSEALED</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>representation</premis:objectCategory>
+  </premis:object>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>ing-M</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>ingest</premis:eventType>
+    <premis:eventDateTime>2026-01-01T00:00:00Z</premis:eventDateTime>
+    <premis:eventOutcomeInformation>
+      <premis:eventOutcome>success</premis:eventOutcome>
+    </premis:eventOutcomeInformation>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>M</premis:linkingObjectIdentifierValue>
+      <premis:linkingObjectRole>output</premis:linkingObjectRole>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+</premis:premis>

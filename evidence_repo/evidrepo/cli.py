@@ -13,6 +13,13 @@
   verify      独立验证导出子包（仅用标准库重算，不依赖求值器）
   proofs      列历史证明（证明号与当时包集合绑定，不可变）
   check-store 整仓移动后重算全部 sealed 字节与原始 XML 哈希
+  inventory-import  导入预期馆藏清单（整份校验，失败不留半份）
+  inventories       列出已导入清单
+  inventory-show    查看某份清单的义务与候选
+  reconcile         按 inventory_id 对账，生成新的不可变报告
+  reports           列出对账报告（按清单过滤）
+  report            查看报告全文及其输入绑定
+  verify-report     独立校验报告文件（内容哈希 + 输入绑定，可搬迁）
 """
 from __future__ import annotations
 
@@ -23,6 +30,8 @@ import sys
 
 from . import db as dbmod
 from . import diagnostics, export as exportmod, ingest, verify_export
+from . import inventory as invmod
+from . import reconcile as reconc
 from .util import safe_relpath, sha256_file
 
 
@@ -200,6 +209,79 @@ def cmd_check_store(args):
             "checked_xml_docs": n_xml, "problems": problems})
 
 
+# ---------------------------------------------------------------------------
+# 预期馆藏对账（与证明/谱系命令完全分离）
+# ---------------------------------------------------------------------------
+
+def cmd_inventory_import(args):
+    conn = _open(args.repo)
+    try:
+        _print(invmod.import_inventory(conn, args.repo, args.path))
+    except invmod.InventoryError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_inventories(args):
+    conn = _open(args.repo)
+    try:
+        _print(invmod.list_inventories(conn))
+    finally:
+        conn.close()
+
+
+def cmd_inventory_show(args):
+    conn = _open(args.repo)
+    try:
+        _print(invmod.get_inventory(conn, args.inventory_id))
+    except invmod.InventoryError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_reconcile(args):
+    conn = _open(args.repo)
+    try:
+        _print(
+            reconc.reconcile_and_store(conn, args.repo, args.inventory_id)
+        )
+    except (invmod.InventoryError, reconc.ReconciliationError) as exc:
+        _print({"error": type(exc).__name__, "message": str(exc)})
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_reports(args):
+    conn = _open(args.repo)
+    try:
+        _print(reconc.list_reports(conn, args.inventory_id))
+    finally:
+        conn.close()
+
+
+def cmd_report(args):
+    conn = _open(args.repo)
+    try:
+        _print(reconc.load_report(conn, args.repo, args.report_id))
+    except reconc.ReconciliationError as exc:
+        _print({"error": "unknown_report", "message": str(exc)})
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_verify_report(args):
+    result = reconc.verify_report(args.path)
+    _print(result)
+    if not result["ok"]:
+        sys.exit(1)
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="evidrepo", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -231,6 +313,26 @@ def build_parser():
     sp.set_defaults(fn=cmd_verify)
     sp = sub.add_parser("proofs"); sp.add_argument("repo"); sp.set_defaults(fn=cmd_proofs)
     sp = sub.add_parser("check-store"); sp.add_argument("repo"); sp.set_defaults(fn=cmd_check_store)
+
+    sp = sub.add_parser("inventory-import")
+    sp.add_argument("repo"); sp.add_argument("path")
+    sp.set_defaults(fn=cmd_inventory_import)
+    sp = sub.add_parser("inventories"); sp.add_argument("repo")
+    sp.set_defaults(fn=cmd_inventories)
+    sp = sub.add_parser("inventory-show")
+    sp.add_argument("repo"); sp.add_argument("inventory_id")
+    sp.set_defaults(fn=cmd_inventory_show)
+    sp = sub.add_parser("reconcile")
+    sp.add_argument("repo"); sp.add_argument("inventory_id")
+    sp.set_defaults(fn=cmd_reconcile)
+    sp = sub.add_parser("reports")
+    sp.add_argument("repo"); sp.add_argument("--inventory", dest="inventory_id")
+    sp.set_defaults(fn=cmd_reports)
+    sp = sub.add_parser("report")
+    sp.add_argument("repo"); sp.add_argument("report_id")
+    sp.set_defaults(fn=cmd_report)
+    sp = sub.add_parser("verify-report"); sp.add_argument("path")
+    sp.set_defaults(fn=cmd_verify_report)
     return p
 
 

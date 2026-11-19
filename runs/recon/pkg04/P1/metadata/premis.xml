@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" version="3.0">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>M</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>bitstream</premis:objectCategory>
+  </premis:object>
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>RUP</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+      <premis:objectCategory>representation</premis:objectCategory>
+  </premis:object>
+</premis:premis>

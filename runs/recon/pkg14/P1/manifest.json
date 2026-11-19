@@ -1,0 +1,80 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M"
+      },
+      "rel_path": "content/M.bin",
+      "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a",
+      "size": 1
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "G0",
+      "id_type": "local",
+      "id_value": "RA",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n0",
+          "node_id": "n0"
+        }
+      ]
+    },
+    {
+      "filegrp": "G1",
+      "id_type": "local",
+      "id_value": "RB",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n1",
+          "node_id": "n1"
+        }
+      ]
+    },
+    {
+      "filegrp": "G2",
+      "id_type": "local",
+      "id_value": "RC",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n2",
+          "node_id": "n2"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-M"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

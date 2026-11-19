@@ -1,0 +1,110 @@
+{
+  "ambiguous_edges": [],
+  "ambiguous_obligations": [],
+  "assignments": [
+    {
+      "identity_conflict": null,
+      "item_id": "ITEM-0000",
+      "may_change_between_maximum_assignments": false,
+      "obligation_id": "L1",
+      "package_id": "P1",
+      "package_ids": [
+        "P1"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RB"
+      },
+      "source_line": 2,
+      "stable_across_all_maximum_assignments": true
+    },
+    {
+      "identity_conflict": null,
+      "item_id": "ITEM-0001",
+      "may_change_between_maximum_assignments": false,
+      "obligation_id": "L2",
+      "package_id": "P1",
+      "package_ids": [
+        "P1"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RA"
+      },
+      "source_line": 3,
+      "stable_across_all_maximum_assignments": true
+    },
+    {
+      "identity_conflict": null,
+      "item_id": "ITEM-0002",
+      "may_change_between_maximum_assignments": false,
+      "obligation_id": "L3",
+      "package_id": "P1",
+      "package_ids": [
+        "P1"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RC"
+      },
+      "source_line": 4,
+      "stable_across_all_maximum_assignments": true
+    }
+  ],
+  "content_sha256": "62f68f5109a22e9c582008dfe8dd277909560f553a9df2970fac4496bbacbb7d",
+  "engine": "reconciliation/v1",
+  "extra_representations": [],
+  "generated_at": "2026-11-19T17:46:36.234071+00:00",
+  "identity_conflicts": [],
+  "inputs": {
+    "inventory": {
+      "format_version": "expected-inventory/v1",
+      "inventory_id": "c01",
+      "item_count": 3,
+      "obligation_count": 3,
+      "source_bytes": 796,
+      "source_sha256": "a8bb9273e3a1f6e02fae9bbdd6be4836a16a70e1630c4325e0227823aa3ab385"
+    },
+    "sealed": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "profile": "offline-evidence-repo/reconciliation/v1",
+  "report_id": "62f68f5109a22e9c582008dfe8dd277909560f553a9df2970fac4496bbacbb7d",
+  "semantics": {
+    "actual_side": "sealed representation identities only",
+    "ambiguity": "alternating_reachability_plus_scc",
+    "identity": "identifierType+identifierValue exact tuple",
+    "matching": "maximum_one_to_one_bipartite",
+    "quality": "inherited from existing provenance/bytes evaluator; never promoted by reconciliation"
+  },
+  "summary": {
+    "actual_representation_identities": 3,
+    "always_satisfied": 3,
+    "ambiguous": 0,
+    "ambiguous_edges": 0,
+    "extra": 0,
+    "identity_conflicts": 0,
+    "maximum_matching_size": 3,
+    "obligation_total": 3,
+    "satisfiable_in_some_maximum_assignment": 3,
+    "satisfied": 3,
+    "unsatisfied": 0
+  },
+  "unsatisfied_obligations": []
+}

@@ -1,0 +1,46 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "K"
+      },
+      "rel_path": "content/K.bin",
+      "sha256": "d79d9fd44ad034758fbdc3b2fa305894e98f111aae32efeb2c70a3b97cd0a456",
+      "size": 10
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-RK",
+      "id_type": "local",
+      "id_value": "RK",
+      "members": [
+        [
+          "local",
+          "K"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n",
+          "node_id": "n"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-K"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

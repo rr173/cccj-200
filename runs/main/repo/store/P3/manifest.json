@@ -1,0 +1,26 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "C"
+      },
+      "rel_path": "content/C.bin",
+      "sha256": "e702633bc11fd00780792554fff077bcbad320042d5d612dc6d7fc99cf98b805",
+      "size": 16
+    }
+  ],
+  "package_id": "P3",
+  "representations": [],
+  "trusted_ingest_events": [],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

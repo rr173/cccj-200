@@ -1,0 +1,19 @@
+<ns0:mets xmlns:ns0="http://www.loc.gov/METS/">
+  <ns0:amdSec>
+    <ns0:mdWrap ID="ADM-M" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>M</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+  </ns0:amdSec>
+  <ns0:fileSec>
+  </ns0:fileSec>
+  <ns0:structMap TYPE="physical">
+  </ns0:structMap>
+</ns0:mets>

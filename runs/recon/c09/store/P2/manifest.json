@@ -1,0 +1,36 @@
+{
+  "members": [],
+  "package_id": "P2",
+  "representations": [
+    {
+      "filegrp": "GRP-RXP",
+      "id_type": "local",
+      "id_value": "RXP",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n2",
+          "node_id": "n2"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-M"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

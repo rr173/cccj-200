@@ -1,0 +1,44 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M"
+      },
+      "rel_path": "content/M.bin",
+      "sha256": "4de1d085050446c4ae79ef9c1562f7088bc017b9106a327b8425130ecb51bdce",
+      "size": 17
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-RUP",
+      "id_type": "local",
+      "id_value": "RUP",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n",
+          "node_id": "n"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "A"
+      },
+      "rel_path": "content/A.bin",
+      "sha256": "ce87e26366dc5b1a2abe9c40102fe88fc869fae3aec1ecc1846ac5274b7629f5",
+      "size": 16
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "B"
+      },
+      "rel_path": "content/B.bin",
+      "sha256": "def533464ceffa7a8a6524d36d25f48d406f0d642308a4c90e996cdc5cb2dc02",
+      "size": 16
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "C"
+      },
+      "rel_path": "content/C.bin",
+      "sha256": "e702633bc11fd00780792554fff077bcbad320042d5d612dc6d7fc99cf98b805",
+      "size": 16
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "D"
+      },
+      "rel_path": "content/D.bin",
+      "sha256": "6b5b3ee7a7d9e1036dfb082ce485cbd11595da08b7b3a299f90fd834ba58ca45",
+      "size": 15
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-R1",
+      "id_type": "local",
+      "id_value": "R1",
+      "members": [
+        [
+          "local",
+          "C"
+        ],
+        [
+          "local",
+          "D"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-1",
+          "node_id": "node-1"
+        },
+        {
+          "label": "node-2",
+          "node_id": "node-2"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ingest-A",
+    "ingest-B"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

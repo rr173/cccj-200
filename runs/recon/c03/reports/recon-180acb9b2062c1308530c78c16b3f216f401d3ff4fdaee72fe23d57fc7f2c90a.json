@@ -1,0 +1,93 @@
+{
+  "ambiguous_edges": [],
+  "ambiguous_obligations": [],
+  "assignments": [],
+  "content_sha256": "180acb9b2062c1308530c78c16b3f216f401d3ff4fdaee72fe23d57fc7f2c90a",
+  "engine": "reconciliation/v1",
+  "extra_representations": [],
+  "generated_at": "2026-11-19T17:46:36.332157+00:00",
+  "identity_conflicts": [],
+  "inputs": {
+    "inventory": {
+      "format_version": "expected-inventory/v1",
+      "inventory_id": "c03",
+      "item_count": 2,
+      "obligation_count": 2,
+      "source_bytes": 571,
+      "source_sha256": "a3fbe81c19f5de5c8b16368289639dc370018f7c4464b158d6e66739c26cb722"
+    },
+    "sealed": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "profile": "offline-evidence-repo/reconciliation/v1",
+  "report_id": "180acb9b2062c1308530c78c16b3f216f401d3ff4fdaee72fe23d57fc7f2c90a",
+  "semantics": {
+    "actual_side": "sealed representation identities only",
+    "ambiguity": "alternating_reachability_plus_scc",
+    "identity": "identifierType+identifierValue exact tuple",
+    "matching": "maximum_one_to_one_bipartite",
+    "quality": "inherited from existing provenance/bytes evaluator; never promoted by reconciliation"
+  },
+  "summary": {
+    "actual_representation_identities": 0,
+    "always_satisfied": 0,
+    "ambiguous": 0,
+    "ambiguous_edges": 0,
+    "extra": 0,
+    "identity_conflicts": 0,
+    "maximum_matching_size": 0,
+    "obligation_total": 2,
+    "satisfiable_in_some_maximum_assignment": 0,
+    "satisfied": 0,
+    "unsatisfied": 2
+  },
+  "unsatisfied_obligations": [
+    {
+      "ambiguous": false,
+      "candidates": [
+        {
+          "representation": {
+            "identifierType": "local",
+            "identifierValue": "R-NOPE1"
+          },
+          "state": "absent_from_sealed_representations"
+        }
+      ],
+      "item_id": "ITEM-0000",
+      "obligation_id": "L1",
+      "reason_code": "no_acceptable_representation_present",
+      "satisfiable_in_some_maximum_assignment": false,
+      "satisfied_in_all_maximum_assignments": false,
+      "source_line": 2
+    },
+    {
+      "ambiguous": false,
+      "candidates": [
+        {
+          "representation": {
+            "identifierType": "local",
+            "identifierValue": "R-NOPE2"
+          },
+          "state": "absent_from_sealed_representations"
+        },
+        {
+          "representation": {
+            "identifierType": "local",
+            "identifierValue": "R-NOPE3"
+          },
+          "state": "absent_from_sealed_representations"
+        }
+      ],
+      "item_id": "ITEM-0001",
+      "obligation_id": "L2",
+      "reason_code": "no_acceptable_representation_present",
+      "satisfiable_in_some_maximum_assignment": false,
+      "satisfied_in_all_maximum_assignments": false,
+      "source_line": 3
+    }
+  ]
+}

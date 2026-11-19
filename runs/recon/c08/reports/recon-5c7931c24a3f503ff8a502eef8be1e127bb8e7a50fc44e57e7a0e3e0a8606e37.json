@@ -1,0 +1,140 @@
+{
+  "ambiguous_edges": [
+    {
+      "assignable_in_all_maximum_assignments": false,
+      "assignable_in_some_maximum_assignment": true,
+      "in_stable_assignment": true,
+      "obligation_id": "L1",
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RDUP"
+      }
+    },
+    {
+      "assignable_in_all_maximum_assignments": false,
+      "assignable_in_some_maximum_assignment": true,
+      "in_stable_assignment": false,
+      "obligation_id": "L2",
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RDUP"
+      }
+    }
+  ],
+  "ambiguous_obligations": [
+    {
+      "item_id": "ITEM-0000",
+      "obligation_id": "L1",
+      "possible_representations": [
+        {
+          "identifierType": "local",
+          "identifierValue": "RDUP"
+        }
+      ],
+      "satisfiable_in_some_maximum_assignment": true,
+      "satisfied_in_all_maximum_assignments": false,
+      "satisfied_in_stable_assignment": true,
+      "source_line": 2
+    },
+    {
+      "item_id": "ITEM-0001",
+      "obligation_id": "L2",
+      "possible_representations": [
+        {
+          "identifierType": "local",
+          "identifierValue": "RDUP"
+        }
+      ],
+      "satisfiable_in_some_maximum_assignment": true,
+      "satisfied_in_all_maximum_assignments": false,
+      "satisfied_in_stable_assignment": false,
+      "source_line": 3
+    }
+  ],
+  "assignments": [
+    {
+      "identity_conflict": null,
+      "item_id": "ITEM-0000",
+      "may_change_between_maximum_assignments": true,
+      "obligation_id": "L1",
+      "package_id": "P1",
+      "package_ids": [
+        "P1"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "RDUP"
+      },
+      "source_line": 2,
+      "stable_across_all_maximum_assignments": false
+    }
+  ],
+  "content_sha256": "5c7931c24a3f503ff8a502eef8be1e127bb8e7a50fc44e57e7a0e3e0a8606e37",
+  "engine": "reconciliation/v1",
+  "extra_representations": [],
+  "generated_at": "2026-11-19T17:46:36.573039+00:00",
+  "identity_conflicts": [],
+  "inputs": {
+    "inventory": {
+      "format_version": "expected-inventory/v1",
+      "inventory_id": "c08",
+      "item_count": 2,
+      "obligation_count": 2,
+      "source_bytes": 506,
+      "source_sha256": "47036861976ee7b86c26f31df07bac722a973af156d74bd4b422b3eec2e5e689"
+    },
+    "sealed": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "profile": "offline-evidence-repo/reconciliation/v1",
+  "report_id": "5c7931c24a3f503ff8a502eef8be1e127bb8e7a50fc44e57e7a0e3e0a8606e37",
+  "semantics": {
+    "actual_side": "sealed representation identities only",
+    "ambiguity": "alternating_reachability_plus_scc",
+    "identity": "identifierType+identifierValue exact tuple",
+    "matching": "maximum_one_to_one_bipartite",
+    "quality": "inherited from existing provenance/bytes evaluator; never promoted by reconciliation"
+  },
+  "summary": {
+    "actual_representation_identities": 1,
+    "always_satisfied": 0,
+    "ambiguous": 2,
+    "ambiguous_edges": 2,
+    "extra": 0,
+    "identity_conflicts": 0,
+    "maximum_matching_size": 1,
+    "obligation_total": 2,
+    "satisfiable_in_some_maximum_assignment": 2,
+    "satisfied": 1,
+    "unsatisfied": 1
+  },
+  "unsatisfied_obligations": [
+    {
+      "ambiguous": true,
+      "candidates": [
+        {
+          "representation": {
+            "identifierType": "local",
+            "identifierValue": "RDUP"
+          },
+          "state": "assigned_to_another_obligation",
+          "taken_by_obligation_id": "L1"
+        }
+      ],
+      "item_id": "ITEM-0001",
+      "obligation_id": "L2",
+      "reason_code": "all_acceptable_candidates_assigned_elsewhere",
+      "satisfiable_in_some_maximum_assignment": true,
+      "satisfied_in_all_maximum_assignments": false,
+      "source_line": 3
+    }
+  ]
+}

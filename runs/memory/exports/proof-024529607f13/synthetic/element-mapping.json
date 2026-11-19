@@ -1,0 +1,189 @@
+{
+  "elements": [
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M0"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M1"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M2"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M3"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M4"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M5"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M6"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "category": "bitstream",
+      "object": [
+        "local",
+        "M7"
+      ],
+      "source": "xml/BIG/manifest.json",
+      "synthetic": "premis:object/objectIdentifier"
+    },
+    {
+      "event_id": "ing-M0",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M1",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M2",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M3",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M4",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M5",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M6",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "event_id": "ing-M7",
+      "mapped": [
+        "eventIdentifier",
+        "eventType",
+        "eventDateTime",
+        "eventOutcomeInformation/eventOutcome",
+        "linkingObjectIdentifier[linkingObjectRole=input|output]"
+      ],
+      "source_xml": "xml/BIG/metadata__premis.xml",
+      "synthetic": "premis:event",
+      "uninterpreted_note": "Any other elements in the source PREMIS are preserved only in the source XML copy and are not treated as evidence."
+    },
+    {
+      "note": "representation members only; source-of-evidence blobs stay in PREMIS lineage, not duplicated as members",
+      "synthetic": "mets:fileSec/fileGrp/file/FLocat"
+    },
+    {
+      "note": "struct node references exactly one representation; a bitstream shown at multiple nodes is never counted twice",
+      "synthetic": "mets:structMap/div/fptr"
+    }
+  ],
+  "profile": "offline-evidence-repo/v1"
+}

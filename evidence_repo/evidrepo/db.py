@@ -15,7 +15,7 @@ import sqlite3
 
 from .util import PKG_SEALED
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 def connect(repo_root):
@@ -140,7 +140,9 @@ def _create(conn):
             raw_xml     TEXT NOT NULL
         );
 
-        -- representation 声明的完整 bitstream 成员集合
+        -- representation 声明的完整 bitstream 成员集合。
+        -- package_id 纳入主键：同一表示身份在不同包中的成员声明各自保留，
+        -- 以便识别“同身份、不同成员集合”的事实冲突（不在导入时静默择一）。
         CREATE TABLE IF NOT EXISTS rep_members (
             rep_id_type   TEXT NOT NULL,
             rep_id_value  TEXT NOT NULL,
@@ -148,7 +150,8 @@ def _create(conn):
             member_value  TEXT NOT NULL,
             package_id    TEXT NOT NULL,
             ord           INTEGER NOT NULL,
-            PRIMARY KEY (rep_id_type, rep_id_value, member_type, member_value)
+            PRIMARY KEY (rep_id_type, rep_id_value, package_id,
+                         member_type, member_value)
         );
 
         -- METS structMap 结构节点（只引用表示；同 bitstream 多处展示不重复计数）
@@ -198,6 +201,59 @@ def _create(conn):
             export_dir   TEXT NOT NULL,
             package_set  TEXT NOT NULL            -- JSON 排序数组，封面包集合快照
         );
+
+        -- 预期馆藏清单（独立存储：绝不进入 objects / events / 谱系求值图）-----
+        CREATE TABLE IF NOT EXISTS inventories (
+            inventory_id    TEXT PRIMARY KEY,
+            batch_note      TEXT NOT NULL,        -- 批次说明
+            format_version  TEXT NOT NULL,        -- 清单格式版本
+            source_sha256   TEXT NOT NULL,        -- 原始清单文件 SHA-256
+            source_bytes    INTEGER NOT NULL,
+            source_lines    INTEGER NOT NULL,     -- 物理行数（含表头）
+            obligation_count INTEGER NOT NULL,
+            item_count      INTEGER NOT NULL,
+            imported_at     TEXT NOT NULL,
+            stored_path     TEXT NOT NULL         -- 仓内相对路径的原始清单副本
+        );
+
+        -- 每条交付义务（一个 item_id 可声明多条义务）
+        CREATE TABLE IF NOT EXISTS inventory_obligations (
+            inventory_id  TEXT NOT NULL REFERENCES inventories(inventory_id),
+            obligation_id TEXT NOT NULL,
+            item_id       TEXT NOT NULL,
+            note          TEXT,
+            source_line   INTEGER NOT NULL,       -- 原始 JSONL 行号（1 基）
+            PRIMARY KEY (inventory_id, obligation_id)
+        );
+        CREATE INDEX IF NOT EXISTS idx_inv_ob_item
+            ON inventory_obligations(inventory_id, item_id);
+
+        -- 每条义务的可接受表示身份（有序二元组；type+value 精确匹配）
+        CREATE TABLE IF NOT EXISTS inventory_acceptable (
+            inventory_id  TEXT NOT NULL,
+            obligation_id TEXT NOT NULL,
+            id_type       TEXT NOT NULL,
+            id_value      TEXT NOT NULL,
+            ord           INTEGER NOT NULL,
+            source_line   INTEGER NOT NULL,
+            PRIMARY KEY (inventory_id, obligation_id, id_type, id_value),
+            FOREIGN KEY (inventory_id, obligation_id)
+                REFERENCES inventory_obligations(inventory_id, obligation_id)
+        );
+
+        -- 对账报告（只增不改；文件内容寻址；绑定清单哈希与封包集合）--------
+        CREATE TABLE IF NOT EXISTS reconciliation_reports (
+            report_no          INTEGER PRIMARY KEY AUTOINCREMENT,
+            report_id          TEXT NOT NULL UNIQUE,
+            inventory_id       TEXT NOT NULL REFERENCES inventories(inventory_id),
+            inventory_sha256   TEXT NOT NULL,
+            package_set_sha256 TEXT NOT NULL,
+            content_sha256     TEXT NOT NULL,
+            created_at         TEXT NOT NULL,
+            report_path        TEXT NOT NULL      -- 仓内相对路径（可搬迁）
+        );
+        CREATE INDEX IF NOT EXISTS idx_recon_inventory
+            ON reconciliation_reports(inventory_id);
         """
     )
     cur = conn.execute("SELECT value FROM meta WHERE key='schema_version'")
@@ -208,8 +264,50 @@ def _create(conn):
             (str(SCHEMA_VERSION),),
         )
         conn.commit()
-    elif int(row[0]) != SCHEMA_VERSION:
+    elif int(row[0]) == SCHEMA_VERSION:
+        pass
+    elif int(row[0]) == 1:
+        # v1 -> v2：rep_members 主键加入 package_id（保留每个包的成员声明，
+        # 以便识别“同身份不同成员集合”的事实冲突）。既有行原样保留。
+        _migrate_v1_to_v2(conn)
+        conn.execute(
+            "UPDATE meta SET value=? WHERE key='schema_version'",
+            (str(SCHEMA_VERSION),),
+        )
+        conn.commit()
+    else:
         raise RuntimeError("schema version mismatch: %s" % row[0])
+
+
+def _migrate_v1_to_v2(conn):
+    cols = [
+        r[1]
+        for r in conn.execute("PRAGMA table_info(rep_members)").fetchall()
+    ]
+    # v1 主键为 (rep_id_type,rep_id_value,member_type,member_value)，
+    # 重建为含 package_id 的表并原样搬运数据。
+    conn.execute("ALTER TABLE rep_members RENAME TO rep_members_v1")
+    conn.execute(
+        """
+        CREATE TABLE rep_members (
+            rep_id_type   TEXT NOT NULL,
+            rep_id_value  TEXT NOT NULL,
+            member_type   TEXT NOT NULL,
+            member_value  TEXT NOT NULL,
+            package_id    TEXT NOT NULL,
+            ord           INTEGER NOT NULL,
+            PRIMARY KEY (rep_id_type, rep_id_value, package_id,
+                         member_type, member_value)
+        )
+        """
+    )
+    conn.execute(
+        "INSERT OR IGNORE INTO rep_members"
+        "(rep_id_type,rep_id_value,member_type,member_value,package_id,ord) "
+        "SELECT rep_id_type,rep_id_value,member_type,member_value,"
+        "package_id,ord FROM rep_members_v1"
+    )
+    conn.execute("DROP TABLE rep_members_v1")
 
 
 def sealed_filter(prefix=""):

@@ -1,0 +1,46 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M2"
+      },
+      "rel_path": "content/M2.bin",
+      "sha256": "29c1b289e7522195b362e44f54e05470b69ad20540ab60a18a05e5bf6951f13d",
+      "size": 2
+    }
+  ],
+  "package_id": "P2",
+  "representations": [
+    {
+      "filegrp": "G2",
+      "id_type": "local",
+      "id_value": "RCONF",
+      "members": [
+        [
+          "local",
+          "M2"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n2",
+          "node_id": "n2"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-M2"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

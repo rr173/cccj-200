@@ -1,0 +1,136 @@
+<mets:mets xmlns:mets="http://www.loc.gov/METS/">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-RBIG" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RBIG</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M0" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M0</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M1" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M1</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M2" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M2</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M3" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M3</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M4" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M4</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M5" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M5</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M6" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M6</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M7" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object xmlns:premis="http://www.loc.gov/premis/v3">
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M7</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ADMID="ADM-RBIG" ID="GRP-RBIG">
+      <mets:file ADMID="ADM-M0" ID="F-RBIG-0">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M0.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M1" ID="F-RBIG-1">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M1.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M2" ID="F-RBIG-2">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M2.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M3" ID="F-RBIG-3">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M3.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M4" ID="F-RBIG-4">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M4.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M5" ID="F-RBIG-5">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M5.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M6" ID="F-RBIG-6">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M6.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+      <mets:file ADMID="ADM-M7" ID="F-RBIG-7">
+        <mets:FLocat xmlns:xlink="http://www.w3.org/1999/xlink" LOCTYPE="URL" xlink:href="content/M7.bin" xlink:type="simple"></mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="big-node" LABEL="big-node">
+      <mets:fptr FILEID="GRP-RBIG"></mets:fptr>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

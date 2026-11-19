@@ -1,0 +1,46 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "M"
+      },
+      "rel_path": "content/M.bin",
+      "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a",
+      "size": 1
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-RA",
+      "id_type": "local",
+      "id_value": "RA",
+      "members": [
+        [
+          "local",
+          "M"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n1",
+          "node_id": "n1"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-M"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

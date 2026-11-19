@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-RA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-RB" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RB</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-RC" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>RC</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-M" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>M</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ID="G-A" ADMID="ADM-RA">
+      <mets:file ID="F-RA-0" ADMID="ADM-M">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="G-B" ADMID="ADM-RB">
+      <mets:file ID="F-RB-0" ADMID="ADM-M">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="G-C" ADMID="ADM-RC">
+      <mets:file ID="F-RC-0" ADMID="ADM-M">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/M.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="n-A" LABEL="n-A">
+      <mets:fptr FILEID="G-A"/>
+    </mets:div>
+    <mets:div ID="n-B" LABEL="n-B">
+      <mets:fptr FILEID="G-B"/>
+    </mets:div>
+    <mets:div ID="n-C" LABEL="n-C">
+      <mets:fptr FILEID="G-C"/>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

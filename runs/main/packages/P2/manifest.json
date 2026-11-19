@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "B"
+      },
+      "rel_path": "content/B.bin",
+      "sha256": "def533464ceffa7a8a6524d36d25f48d406f0d642308a4c90e996cdc5cb2dc02",
+      "size": 16
+    }
+  ],
+  "package_id": "P2",
+  "representations": [],
+  "trusted_ingest_events": [
+    "ingest-B"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}
