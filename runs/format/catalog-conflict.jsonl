@@ -1,0 +1,16 @@
+{"record_type": "catalog_header", "format_version": "format-catalog/v1", "catalog_id": "fmt-cat", "catalog_version": "2026-11", "note": "改动"}
+{"record_type": "format", "format_id": "fmt.alpha", "name": "Alpha Document"}
+{"record_type": "format", "format_id": "fmt.beta", "name": "Beta Image"}
+{"record_type": "format", "format_id": "fmt.gamma", "name": "Gamma Mask"}
+{"record_type": "format", "format_id": "fmt.delta", "name": "Delta Safe"}
+{"record_type": "format", "format_id": "fmt.omega", "name": "Omega Late"}
+{"record_type": "signature", "signature_id": "sig.alpha.fixed", "format_id": "fmt.alpha", "required": [{"bytes": "414c504841", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.alpha.masked", "format_id": "fmt.alpha", "required": [{"bytes": "414c504841", "offset": 0, "mask": "ffff00ffff"}]}
+{"record_type": "signature", "signature_id": "sig.alpha.multi", "format_id": "fmt.alpha", "required": [{"bytes": "414c504841", "offset": 0}, {"bytes": "4f4d454741", "window": [64, 192]}]}
+{"record_type": "signature", "signature_id": "sig.beta.fixed", "format_id": "fmt.beta", "required": [{"bytes": "42455441", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.beta.window", "format_id": "fmt.beta", "required": [{"bytes": "42455441", "window": [0, 256]}]}
+{"record_type": "signature", "signature_id": "sig.gamma.masked", "format_id": "fmt.gamma", "required": [{"bytes": "47414d4d41", "offset": 0, "mask": "ff00ffffff"}]}
+{"record_type": "signature", "signature_id": "sig.delta.forbid", "format_id": "fmt.delta", "required": [{"bytes": "44454c5441", "offset": 0}], "forbidden": [{"bytes": "424144", "window": [8, 64]}]}
+{"record_type": "signature", "signature_id": "sig.omega.late", "format_id": "fmt.omega", "required": [{"bytes": "4f4d454741", "window": [60000, 200000]}]}
+{"record_type": "signature", "signature_id": "sig.omega.masked", "format_id": "fmt.omega", "required": [{"bytes": "4f4d454741", "window": [60000, 200000], "mask": "ff00ffffff"}]}
+{"record_type": "signature", "signature_id": "sig.omega.fixedlate", "format_id": "fmt.omega", "required": [{"bytes": "4f4d454741", "offset": 131070}]}

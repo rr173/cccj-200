@@ -1,0 +1,9 @@
+{"record_type": "catalog_header", "format_version": "format-catalog/v1", "catalog_id": "scale-a", "catalog_version": "v1"}
+{"record_type": "format", "format_id": "fmt.alpha", "name": "A"}
+{"record_type": "format", "format_id": "fmt.gamma", "name": "G"}
+{"record_type": "format", "format_id": "fmt.omega", "name": "O"}
+{"record_type": "format", "format_id": "fmt.never", "name": "N"}
+{"record_type": "signature", "signature_id": "sig.alpha", "format_id": "fmt.alpha", "required": [{"bytes": "414c504841", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.gamma", "format_id": "fmt.gamma", "required": [{"bytes": "47414d4d41", "window": [512, 2048], "mask": "ff00ffffff"}]}
+{"record_type": "signature", "signature_id": "sig.omega", "format_id": "fmt.omega", "required": [{"bytes": "4f4d454741", "window": [3145728, 4194304]}]}
+{"record_type": "signature", "signature_id": "sig.never", "format_id": "fmt.never", "required": [{"bytes": "ff00ff00ff", "offset": 10}], "forbidden": [{"bytes": "424144", "window": [0, 1024]}]}

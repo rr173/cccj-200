@@ -1,0 +1,146 @@
+{
+  "content_sha256": "c0a53d8410ddf5fb37128d466e290e283c2b1ce5336b21385f930c0b96b60db2",
+  "engine": "format-profile/v1",
+  "generated_at": "2026-11-20T05:43:35.577483+00:00",
+  "inputs": {
+    "catalog": {
+      "catalog_id": "scale-a",
+      "catalog_sha256": "aedc71e6e0ccf458da9add226ff22450ffa1411d3d1ee174417905823acfcd82",
+      "catalog_version": "v1",
+      "format_count": 4,
+      "signature_count": 4
+    },
+    "packages": {
+      "package_set": [
+        "BIG"
+      ],
+      "package_set_sha256": "8e08c31c4f55eb0d95c7e700f5e092eb8bc0005fe41fd5769d69ff5b7e9ced40"
+    }
+  },
+  "objects": [
+    {
+      "byte_source": {
+        "package_id": "BIG",
+        "rel_path": "content/BS-BIG.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "scale-a",
+        "catalog_sha256": "aedc71e6e0ccf458da9add226ff22450ffa1411d3d1ee174417905823acfcd82",
+        "catalog_version": "v1"
+      },
+      "content_length": 8388608,
+      "content_sha256": "a4c7b05c8bcb5900db67495ffe23c0862a5546706524de20d094de7d6c798663",
+      "copies": [
+        {
+          "actual_sha256": "a4c7b05c8bcb5900db67495ffe23c0862a5546706524de20d094de7d6c798663",
+          "declared_sha256": "a4c7b05c8bcb5900db67495ffe23c0862a5546706524de20d094de7d6c798663",
+          "package_id": "BIG",
+          "rel_path": "content/BS-BIG.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 8388608,
+          "verify_sha256": "a4c7b05c8bcb5900db67495ffe23c0862a5546706524de20d094de7d6c798663"
+        }
+      ],
+      "formats": [
+        "fmt.alpha",
+        "fmt.gamma",
+        "fmt.omega"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.gamma",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "47414d4d41",
+                "mask": "ff00ffffff",
+                "window": [
+                  512,
+                  2048
+                ]
+              },
+              "match_count": 1,
+              "matched_bytes": "47584d4d41",
+              "offsets": [
+                1000
+              ]
+            }
+          ],
+          "signature_id": "sig.gamma"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.omega",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "4f4d454741",
+                "window": [
+                  3145728,
+                  4194304
+                ]
+              },
+              "match_count": 1,
+              "matched_bytes": "4f4d454741",
+              "offsets": [
+                4194302
+              ]
+            }
+          ],
+          "signature_id": "sig.omega"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-BIG",
+      "package_ids": [
+        "BIG"
+      ],
+      "result": "ambiguous"
+    }
+  ],
+  "profile": "offline-evidence-repo/format-profile/v1",
+  "profile_id": "c0a53d8410ddf5fb37128d466e290e283c2b1ce5336b21385f930c0b96b60db2",
+  "semantics": {
+    "bytes": "sealed payloads re-read and checked (length + SHA-256) before scanning; invalid bytes are never masked by signature hits",
+    "identity": "identifierType+identifierValue exact tuple; same bytes under different identities are separate records",
+    "matching": "all fully-matching signatures; identified iff all hits name one format, ambiguous iff hits name several, unidentified iff no hits",
+    "scope": "bitstream identities declared in the given sealed package set only; staging packages never enter"
+  },
+  "summary": {
+    "ambiguous": 1,
+    "by_byte_state": {
+      "bytes_corrupt": 0,
+      "bytes_missing": 0,
+      "bytes_ok": 1,
+      "identity_conflict": 0,
+      "not_received": 0
+    },
+    "bytes_invalid": 0,
+    "formats": {},
+    "identified": 0,
+    "identity_conflict": 0,
+    "objects_total": 1,
+    "unidentified": 0
+  }
+}

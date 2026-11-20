@@ -1,0 +1,181 @@
+{"record_type": "catalog_header", "format_version": "format-catalog/v1", "catalog_id": "scale-b", "catalog_version": "v1"}
+{"record_type": "format", "format_id": "fmt.k000", "name": "Fmt 0"}
+{"record_type": "format", "format_id": "fmt.k001", "name": "Fmt 1"}
+{"record_type": "format", "format_id": "fmt.k002", "name": "Fmt 2"}
+{"record_type": "format", "format_id": "fmt.k003", "name": "Fmt 3"}
+{"record_type": "format", "format_id": "fmt.k004", "name": "Fmt 4"}
+{"record_type": "format", "format_id": "fmt.k005", "name": "Fmt 5"}
+{"record_type": "format", "format_id": "fmt.k006", "name": "Fmt 6"}
+{"record_type": "format", "format_id": "fmt.k007", "name": "Fmt 7"}
+{"record_type": "format", "format_id": "fmt.k008", "name": "Fmt 8"}
+{"record_type": "format", "format_id": "fmt.k009", "name": "Fmt 9"}
+{"record_type": "format", "format_id": "fmt.k010", "name": "Fmt 10"}
+{"record_type": "format", "format_id": "fmt.k011", "name": "Fmt 11"}
+{"record_type": "format", "format_id": "fmt.k012", "name": "Fmt 12"}
+{"record_type": "format", "format_id": "fmt.k013", "name": "Fmt 13"}
+{"record_type": "format", "format_id": "fmt.k014", "name": "Fmt 14"}
+{"record_type": "format", "format_id": "fmt.k015", "name": "Fmt 15"}
+{"record_type": "format", "format_id": "fmt.k016", "name": "Fmt 16"}
+{"record_type": "format", "format_id": "fmt.k017", "name": "Fmt 17"}
+{"record_type": "format", "format_id": "fmt.k018", "name": "Fmt 18"}
+{"record_type": "format", "format_id": "fmt.k019", "name": "Fmt 19"}
+{"record_type": "format", "format_id": "fmt.k020", "name": "Fmt 20"}
+{"record_type": "format", "format_id": "fmt.k021", "name": "Fmt 21"}
+{"record_type": "format", "format_id": "fmt.k022", "name": "Fmt 22"}
+{"record_type": "format", "format_id": "fmt.k023", "name": "Fmt 23"}
+{"record_type": "format", "format_id": "fmt.k024", "name": "Fmt 24"}
+{"record_type": "format", "format_id": "fmt.k025", "name": "Fmt 25"}
+{"record_type": "format", "format_id": "fmt.k026", "name": "Fmt 26"}
+{"record_type": "format", "format_id": "fmt.k027", "name": "Fmt 27"}
+{"record_type": "format", "format_id": "fmt.k028", "name": "Fmt 28"}
+{"record_type": "format", "format_id": "fmt.k029", "name": "Fmt 29"}
+{"record_type": "format", "format_id": "fmt.k030", "name": "Fmt 30"}
+{"record_type": "format", "format_id": "fmt.k031", "name": "Fmt 31"}
+{"record_type": "format", "format_id": "fmt.k032", "name": "Fmt 32"}
+{"record_type": "format", "format_id": "fmt.k033", "name": "Fmt 33"}
+{"record_type": "format", "format_id": "fmt.k034", "name": "Fmt 34"}
+{"record_type": "format", "format_id": "fmt.k035", "name": "Fmt 35"}
+{"record_type": "format", "format_id": "fmt.k036", "name": "Fmt 36"}
+{"record_type": "format", "format_id": "fmt.k037", "name": "Fmt 37"}
+{"record_type": "format", "format_id": "fmt.k038", "name": "Fmt 38"}
+{"record_type": "format", "format_id": "fmt.k039", "name": "Fmt 39"}
+{"record_type": "format", "format_id": "fmt.k040", "name": "Fmt 40"}
+{"record_type": "format", "format_id": "fmt.k041", "name": "Fmt 41"}
+{"record_type": "format", "format_id": "fmt.k042", "name": "Fmt 42"}
+{"record_type": "format", "format_id": "fmt.k043", "name": "Fmt 43"}
+{"record_type": "format", "format_id": "fmt.k044", "name": "Fmt 44"}
+{"record_type": "format", "format_id": "fmt.k045", "name": "Fmt 45"}
+{"record_type": "format", "format_id": "fmt.k046", "name": "Fmt 46"}
+{"record_type": "format", "format_id": "fmt.k047", "name": "Fmt 47"}
+{"record_type": "format", "format_id": "fmt.k048", "name": "Fmt 48"}
+{"record_type": "format", "format_id": "fmt.k049", "name": "Fmt 49"}
+{"record_type": "format", "format_id": "fmt.k050", "name": "Fmt 50"}
+{"record_type": "format", "format_id": "fmt.k051", "name": "Fmt 51"}
+{"record_type": "format", "format_id": "fmt.k052", "name": "Fmt 52"}
+{"record_type": "format", "format_id": "fmt.k053", "name": "Fmt 53"}
+{"record_type": "format", "format_id": "fmt.k054", "name": "Fmt 54"}
+{"record_type": "format", "format_id": "fmt.k055", "name": "Fmt 55"}
+{"record_type": "format", "format_id": "fmt.k056", "name": "Fmt 56"}
+{"record_type": "format", "format_id": "fmt.k057", "name": "Fmt 57"}
+{"record_type": "format", "format_id": "fmt.k058", "name": "Fmt 58"}
+{"record_type": "format", "format_id": "fmt.k059", "name": "Fmt 59"}
+{"record_type": "signature", "signature_id": "sig.k000.a", "format_id": "fmt.k000", "required": [{"bytes": "5441303030303030", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k000.b", "format_id": "fmt.k000", "required": [{"bytes": "5442303030303030", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k001.a", "format_id": "fmt.k001", "required": [{"bytes": "5441303030303031", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k001.b", "format_id": "fmt.k001", "required": [{"bytes": "5442303030303031", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k002.a", "format_id": "fmt.k002", "required": [{"bytes": "5441303030303032", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k002.b", "format_id": "fmt.k002", "required": [{"bytes": "5442303030303032", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k003.a", "format_id": "fmt.k003", "required": [{"bytes": "5441303030303033", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k003.b", "format_id": "fmt.k003", "required": [{"bytes": "5442303030303033", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k004.a", "format_id": "fmt.k004", "required": [{"bytes": "5441303030303034", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k004.b", "format_id": "fmt.k004", "required": [{"bytes": "5442303030303034", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k005.a", "format_id": "fmt.k005", "required": [{"bytes": "5441303030303035", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k005.b", "format_id": "fmt.k005", "required": [{"bytes": "5442303030303035", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k006.a", "format_id": "fmt.k006", "required": [{"bytes": "5441303030303036", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k006.b", "format_id": "fmt.k006", "required": [{"bytes": "5442303030303036", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k007.a", "format_id": "fmt.k007", "required": [{"bytes": "5441303030303037", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k007.b", "format_id": "fmt.k007", "required": [{"bytes": "5442303030303037", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k008.a", "format_id": "fmt.k008", "required": [{"bytes": "5441303030303038", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k008.b", "format_id": "fmt.k008", "required": [{"bytes": "5442303030303038", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k009.a", "format_id": "fmt.k009", "required": [{"bytes": "5441303030303039", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k009.b", "format_id": "fmt.k009", "required": [{"bytes": "5442303030303039", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k010.a", "format_id": "fmt.k010", "required": [{"bytes": "5441303030303130", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k010.b", "format_id": "fmt.k010", "required": [{"bytes": "5442303030303130", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k011.a", "format_id": "fmt.k011", "required": [{"bytes": "5441303030303131", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k011.b", "format_id": "fmt.k011", "required": [{"bytes": "5442303030303131", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k012.a", "format_id": "fmt.k012", "required": [{"bytes": "5441303030303132", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k012.b", "format_id": "fmt.k012", "required": [{"bytes": "5442303030303132", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k013.a", "format_id": "fmt.k013", "required": [{"bytes": "5441303030303133", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k013.b", "format_id": "fmt.k013", "required": [{"bytes": "5442303030303133", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k014.a", "format_id": "fmt.k014", "required": [{"bytes": "5441303030303134", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k014.b", "format_id": "fmt.k014", "required": [{"bytes": "5442303030303134", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k015.a", "format_id": "fmt.k015", "required": [{"bytes": "5441303030303135", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k015.b", "format_id": "fmt.k015", "required": [{"bytes": "5442303030303135", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k016.a", "format_id": "fmt.k016", "required": [{"bytes": "5441303030303136", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k016.b", "format_id": "fmt.k016", "required": [{"bytes": "5442303030303136", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k017.a", "format_id": "fmt.k017", "required": [{"bytes": "5441303030303137", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k017.b", "format_id": "fmt.k017", "required": [{"bytes": "5442303030303137", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k018.a", "format_id": "fmt.k018", "required": [{"bytes": "5441303030303138", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k018.b", "format_id": "fmt.k018", "required": [{"bytes": "5442303030303138", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k019.a", "format_id": "fmt.k019", "required": [{"bytes": "5441303030303139", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k019.b", "format_id": "fmt.k019", "required": [{"bytes": "5442303030303139", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k020.a", "format_id": "fmt.k020", "required": [{"bytes": "5441303030303230", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k020.b", "format_id": "fmt.k020", "required": [{"bytes": "5442303030303230", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k021.a", "format_id": "fmt.k021", "required": [{"bytes": "5441303030303231", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k021.b", "format_id": "fmt.k021", "required": [{"bytes": "5442303030303231", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k022.a", "format_id": "fmt.k022", "required": [{"bytes": "5441303030303232", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k022.b", "format_id": "fmt.k022", "required": [{"bytes": "5442303030303232", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k023.a", "format_id": "fmt.k023", "required": [{"bytes": "5441303030303233", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k023.b", "format_id": "fmt.k023", "required": [{"bytes": "5442303030303233", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k024.a", "format_id": "fmt.k024", "required": [{"bytes": "5441303030303234", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k024.b", "format_id": "fmt.k024", "required": [{"bytes": "5442303030303234", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k025.a", "format_id": "fmt.k025", "required": [{"bytes": "5441303030303235", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k025.b", "format_id": "fmt.k025", "required": [{"bytes": "5442303030303235", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k026.a", "format_id": "fmt.k026", "required": [{"bytes": "5441303030303236", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k026.b", "format_id": "fmt.k026", "required": [{"bytes": "5442303030303236", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k027.a", "format_id": "fmt.k027", "required": [{"bytes": "5441303030303237", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k027.b", "format_id": "fmt.k027", "required": [{"bytes": "5442303030303237", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k028.a", "format_id": "fmt.k028", "required": [{"bytes": "5441303030303238", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k028.b", "format_id": "fmt.k028", "required": [{"bytes": "5442303030303238", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k029.a", "format_id": "fmt.k029", "required": [{"bytes": "5441303030303239", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k029.b", "format_id": "fmt.k029", "required": [{"bytes": "5442303030303239", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k030.a", "format_id": "fmt.k030", "required": [{"bytes": "5441303030303330", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k030.b", "format_id": "fmt.k030", "required": [{"bytes": "5442303030303330", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k031.a", "format_id": "fmt.k031", "required": [{"bytes": "5441303030303331", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k031.b", "format_id": "fmt.k031", "required": [{"bytes": "5442303030303331", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k032.a", "format_id": "fmt.k032", "required": [{"bytes": "5441303030303332", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k032.b", "format_id": "fmt.k032", "required": [{"bytes": "5442303030303332", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k033.a", "format_id": "fmt.k033", "required": [{"bytes": "5441303030303333", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k033.b", "format_id": "fmt.k033", "required": [{"bytes": "5442303030303333", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k034.a", "format_id": "fmt.k034", "required": [{"bytes": "5441303030303334", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k034.b", "format_id": "fmt.k034", "required": [{"bytes": "5442303030303334", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k035.a", "format_id": "fmt.k035", "required": [{"bytes": "5441303030303335", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k035.b", "format_id": "fmt.k035", "required": [{"bytes": "5442303030303335", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k036.a", "format_id": "fmt.k036", "required": [{"bytes": "5441303030303336", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k036.b", "format_id": "fmt.k036", "required": [{"bytes": "5442303030303336", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k037.a", "format_id": "fmt.k037", "required": [{"bytes": "5441303030303337", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k037.b", "format_id": "fmt.k037", "required": [{"bytes": "5442303030303337", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k038.a", "format_id": "fmt.k038", "required": [{"bytes": "5441303030303338", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k038.b", "format_id": "fmt.k038", "required": [{"bytes": "5442303030303338", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k039.a", "format_id": "fmt.k039", "required": [{"bytes": "5441303030303339", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k039.b", "format_id": "fmt.k039", "required": [{"bytes": "5442303030303339", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k040.a", "format_id": "fmt.k040", "required": [{"bytes": "5441303030303430", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k040.b", "format_id": "fmt.k040", "required": [{"bytes": "5442303030303430", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k041.a", "format_id": "fmt.k041", "required": [{"bytes": "5441303030303431", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k041.b", "format_id": "fmt.k041", "required": [{"bytes": "5442303030303431", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k042.a", "format_id": "fmt.k042", "required": [{"bytes": "5441303030303432", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k042.b", "format_id": "fmt.k042", "required": [{"bytes": "5442303030303432", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k043.a", "format_id": "fmt.k043", "required": [{"bytes": "5441303030303433", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k043.b", "format_id": "fmt.k043", "required": [{"bytes": "5442303030303433", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k044.a", "format_id": "fmt.k044", "required": [{"bytes": "5441303030303434", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k044.b", "format_id": "fmt.k044", "required": [{"bytes": "5442303030303434", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k045.a", "format_id": "fmt.k045", "required": [{"bytes": "5441303030303435", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k045.b", "format_id": "fmt.k045", "required": [{"bytes": "5442303030303435", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k046.a", "format_id": "fmt.k046", "required": [{"bytes": "5441303030303436", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k046.b", "format_id": "fmt.k046", "required": [{"bytes": "5442303030303436", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k047.a", "format_id": "fmt.k047", "required": [{"bytes": "5441303030303437", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k047.b", "format_id": "fmt.k047", "required": [{"bytes": "5442303030303437", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k048.a", "format_id": "fmt.k048", "required": [{"bytes": "5441303030303438", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k048.b", "format_id": "fmt.k048", "required": [{"bytes": "5442303030303438", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k049.a", "format_id": "fmt.k049", "required": [{"bytes": "5441303030303439", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k049.b", "format_id": "fmt.k049", "required": [{"bytes": "5442303030303439", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k050.a", "format_id": "fmt.k050", "required": [{"bytes": "5441303030303530", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k050.b", "format_id": "fmt.k050", "required": [{"bytes": "5442303030303530", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k051.a", "format_id": "fmt.k051", "required": [{"bytes": "5441303030303531", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k051.b", "format_id": "fmt.k051", "required": [{"bytes": "5442303030303531", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k052.a", "format_id": "fmt.k052", "required": [{"bytes": "5441303030303532", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k052.b", "format_id": "fmt.k052", "required": [{"bytes": "5442303030303532", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k053.a", "format_id": "fmt.k053", "required": [{"bytes": "5441303030303533", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k053.b", "format_id": "fmt.k053", "required": [{"bytes": "5442303030303533", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k054.a", "format_id": "fmt.k054", "required": [{"bytes": "5441303030303534", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k054.b", "format_id": "fmt.k054", "required": [{"bytes": "5442303030303534", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k055.a", "format_id": "fmt.k055", "required": [{"bytes": "5441303030303535", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k055.b", "format_id": "fmt.k055", "required": [{"bytes": "5442303030303535", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k056.a", "format_id": "fmt.k056", "required": [{"bytes": "5441303030303536", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k056.b", "format_id": "fmt.k056", "required": [{"bytes": "5442303030303536", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k057.a", "format_id": "fmt.k057", "required": [{"bytes": "5441303030303537", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k057.b", "format_id": "fmt.k057", "required": [{"bytes": "5442303030303537", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k058.a", "format_id": "fmt.k058", "required": [{"bytes": "5441303030303538", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k058.b", "format_id": "fmt.k058", "required": [{"bytes": "5442303030303538", "window": [16, 64]}]}
+{"record_type": "signature", "signature_id": "sig.k059.a", "format_id": "fmt.k059", "required": [{"bytes": "5441303030303539", "offset": 0}]}
+{"record_type": "signature", "signature_id": "sig.k059.b", "format_id": "fmt.k059", "required": [{"bytes": "5442303030303539", "window": [16, 64]}]}

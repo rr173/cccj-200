@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-CONFLICT"
+      },
+      "rel_path": "content/BS-CONFLICT.bin",
+      "sha256": "2e0fff38d93435c3537261944355ff8fafafa72cd3d74f62dfed110e0d86e90b",
+      "size": 405
+    }
+  ],
+  "package_id": "P4",
+  "representations": [],
+  "trusted_ingest_events": [
+    "ing-p4"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

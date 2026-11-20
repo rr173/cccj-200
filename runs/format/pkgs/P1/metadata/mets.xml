@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-REP-1" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>REP-1</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-ALPHA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-ALPHA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-ALPHA-OMEGA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-ALPHA-OMEGA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-AMB" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-AMB</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-BETA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-BETA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-GAMMA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-GAMMA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-DELTA-OK" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-DELTA-OK</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-DELTA-BAD" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-DELTA-BAD</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-UNKNOWN" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-UNKNOWN</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-EMPTY" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-EMPTY</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ID="GRP-REP-1" ADMID="ADM-REP-1">
+      <mets:file ID="F-BS-ALPHA-0" ADMID="ADM-BS-ALPHA">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-ALPHA.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="node-1" LABEL="node-1">
+      <mets:fptr FILEID="GRP-REP-1"/>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

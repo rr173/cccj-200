@@ -1,0 +1,96 @@
+<ns0:mets xmlns:ns0="http://www.loc.gov/METS/">
+  <ns0:amdSec>
+    <ns0:mdWrap ID="ADM-REP-2" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>REP-2</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>representation</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-BIG" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-BIG</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-DUP" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-DUP</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-ALPHA" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-ALPHA</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-CORRUPT" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-CORRUPT</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-MISSING" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-MISSING</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+    <ns0:mdWrap ID="ADM-BS-NOTRECV" MDTYPE="PREMIS">
+      <ns0:xmlData>
+        <ns1:object xmlns:ns1="http://www.loc.gov/premis/v3">
+          <ns1:objectIdentifier>
+            <ns1:objectIdentifierType>local</ns1:objectIdentifierType>
+            <ns1:objectIdentifierValue>BS-NOTRECV</ns1:objectIdentifierValue>
+          </ns1:objectIdentifier>
+          <ns1:objectCategory>bitstream</ns1:objectCategory>
+        </ns1:object>
+      </ns0:xmlData>
+    </ns0:mdWrap>
+  </ns0:amdSec>
+  <ns0:fileSec>
+    <ns0:fileGrp ADMID="ADM-REP-2" ID="GRP-REP-2">
+      <ns0:file ADMID="ADM-BS-BIG" ID="F-BS-BIG-0">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-BIG.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+      <ns0:file ADMID="ADM-BS-DUP" ID="F-BS-DUP-1">
+        <ns0:FLocat xmlns:ns2="http://www.w3.org/1999/xlink" LOCTYPE="URL" ns2:href="content/BS-DUP.bin" ns2:type="simple"></ns0:FLocat>
+      </ns0:file>
+    </ns0:fileGrp>
+  </ns0:fileSec>
+  <ns0:structMap TYPE="physical">
+    <ns0:div ID="node-2" LABEL="node-2">
+      <ns0:fptr FILEID="GRP-REP-2"></ns0:fptr>
+    </ns0:div>
+  </ns0:structMap>
+</ns0:mets>

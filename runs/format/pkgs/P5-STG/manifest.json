@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-STAGING"
+      },
+      "rel_path": "content/BS-STAGING.bin",
+      "sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "size": 405
+    }
+  ],
+  "package_id": "P5-STG",
+  "representations": [],
+  "trusted_ingest_events": [
+    "ing-p5"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

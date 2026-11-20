@@ -1,0 +1,160 @@
+{
+  "audience": "aud",
+  "contents": [
+    {
+      "alias_rule_actions": {
+        "local\u001fBS-ALPHA": {
+          "action": "release",
+          "source_line": 2
+        },
+        "local\u001fBS-CONFLICT": {
+          "action": "release",
+          "source_line": 4
+        },
+        "local\u001fBS-DUP": {
+          "action": "release",
+          "source_line": 3
+        }
+      },
+      "aliases": [
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-ALPHA",
+          "package_id": "P1"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-ALPHA",
+          "package_id": "P2"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-CONFLICT",
+          "package_id": "P3"
+        },
+        {
+          "identifierType": "local",
+          "identifierValue": "BS-DUP",
+          "package_id": "P2"
+        }
+      ],
+      "blocked": false,
+      "bound_digests": [],
+      "content_sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "decision": "release",
+      "length": 405,
+      "merged_redaction_ranges": [],
+      "reasons": []
+    }
+  ],
+  "created_at": "2026-11-20T05:43:35.178999+00:00",
+  "engine": "release-plan/v1",
+  "inputs": {
+    "request": {
+      "format_version": "release-request/v1",
+      "request_id": "RQ",
+      "selections": [
+        {
+          "external_code": "EXT-1",
+          "identifierType": "local",
+          "identifierValue": "REP-1",
+          "source_line": 2
+        }
+      ],
+      "source_bytes": 238,
+      "source_lines": 2,
+      "source_sha256": "f31916c38665122150e3e46090587aef19b9d8905217bcf94138577715a4733f"
+    },
+    "rules": {
+      "format_version": "release-rules/v1",
+      "rules": [
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-ALPHA"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 2
+        },
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-CONFLICT"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 4
+        },
+        {
+          "action": "release",
+          "bitstream": {
+            "identifierType": "local",
+            "identifierValue": "BS-DUP"
+          },
+          "content_sha256": null,
+          "ranges": [],
+          "source_line": 3
+        }
+      ],
+      "rules_id": "RR",
+      "source_bytes": 462,
+      "source_lines": 4,
+      "source_sha256": "1a8ba30ff73dec87d3aa86eabaf4ee9e5febd837c618ab44c3cff8f44646125b"
+    },
+    "sealed": {
+      "package_set": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P6"
+      ],
+      "package_set_sha256": "dd65b81ef8d7cc8140c447cfe8543bed0d8ffa20f25a72746e0bdbe5199f6d4c"
+    }
+  },
+  "plan_id": "3396c10f521968d42b2fc12dc795a5da27b5c6f73cfe2cc2e63c8467979148ef",
+  "profile": "offline-evidence-repo/release-plan/v1",
+  "representations": [
+    {
+      "content_digests": [
+        "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221"
+      ],
+      "decision": "deliverable",
+      "external_code": "EXT-1",
+      "identity": {
+        "identifierType": "local",
+        "identifierValue": "REP-1"
+      },
+      "member_checks": [
+        {
+          "identity": {
+            "identifierType": "local",
+            "identifierValue": "BS-ALPHA"
+          },
+          "origin_proven": true,
+          "reasons": [],
+          "state": "bytes_ok"
+        }
+      ],
+      "member_set_conflict": false,
+      "reasons": [],
+      "request_line": 2,
+      "sealed_packages": [
+        "P1"
+      ]
+    }
+  ],
+  "summary": {
+    "content_blocked": 0,
+    "content_held": 0,
+    "content_redact": 0,
+    "content_release": 1,
+    "content_total": 1,
+    "deliverable": 1,
+    "held": 0,
+    "representation_total": 1
+  }
+}

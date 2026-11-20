@@ -26,6 +26,14 @@
   release-publish   按确认的 plan_id 发布到全新目标目录（陈旧计划拒绝）
   release-verify    离线校验外发目录（仅依据公开格式与清单，可搬离仓库）
   release-deliveries 列出发布登记
+  catalog-register  登记格式签名目录版本（整份校验，失败不留半份）
+  catalogs          列出已登记的目录版本
+  catalog-show      查看目录版本的格式与签名定义
+  profile-run       对一组封存包启动格式画像（不可变结果、内容寻址）
+  profiles          列出画像结果
+  profile-show      查看画像逐对象结果与汇总
+  profile-check-binding 校验画像输入绑定（对照当前仓库；历史画像仍可校验）
+  profile-verify    离线校验画像结果文件（内容摘要+绑定，可搬离仓库）
 """
 from __future__ import annotations
 
@@ -36,9 +44,12 @@ import sys
 
 from . import db as dbmod
 from . import diagnostics, export as exportmod, ingest, verify_export
+from . import format_catalog as fcmod
+from . import format_profile as fpmod
 from . import inventory as invmod
 from . import reconcile as reconc
 from . import release_plan, release_publish, release_rules, verify_release
+from . import verify_profile as vpmod
 from .util import safe_relpath, sha256_file
 
 
@@ -375,6 +386,111 @@ def cmd_release_deliveries(args):
         conn.close()
 
 
+# ---------------------------------------------------------------------------
+# 格式画像（目录登记 -> 启动画像 -> 查看结果 -> 绑定/离线校验）
+# ---------------------------------------------------------------------------
+
+def cmd_catalog_register(args):
+    conn = _open(args.repo)
+    try:
+        _print(fcmod.register_catalog(conn, args.repo, args.path))
+    except fcmod.CatalogError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_catalogs(args):
+    conn = _open(args.repo)
+    try:
+        _print(fcmod.list_catalogs(conn))
+    finally:
+        conn.close()
+
+
+def cmd_catalog_show(args):
+    conn = _open(args.repo)
+    try:
+        _print(fcmod.get_catalog(conn, args.catalog_id, args.catalog_version))
+    except fcmod.CatalogError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def _resolve_scope(conn, args):
+    if args.all_sealed:
+        pkg_set = fpmod.sealed_package_set(conn)
+        if not pkg_set:
+            raise fpmod.ProfileError(
+                "no sealed packages in repository", code="empty_scope"
+            )
+        return pkg_set
+    return [p for p in args.packages.split(",") if p]
+
+
+def cmd_profile_run(args):
+    conn = _open(args.repo)
+    try:
+        try:
+            pkg_ids = _resolve_scope(conn, args)
+            res = fpmod.run_profile(
+                conn, args.repo, args.catalog_id, args.catalog_version,
+                pkg_ids,
+            )
+        except fcmod.CatalogError as exc:
+            _print(exc.as_dict())
+            sys.exit(1)
+        except fpmod.ProfileError as exc:
+            _print(exc.as_dict())
+            sys.exit(1)
+        _print(res)
+    finally:
+        conn.close()
+
+
+def cmd_profiles(args):
+    conn = _open(args.repo)
+    try:
+        _print(fpmod.list_profiles(conn))
+    finally:
+        conn.close()
+
+
+def cmd_profile_show(args):
+    conn = _open(args.repo)
+    try:
+        _print(fpmod.load_profile(conn, args.repo, args.profile_id))
+    except fpmod.ProfileError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+
+
+def cmd_profile_check_binding(args):
+    conn = _open(args.repo)
+    try:
+        result = fpmod.check_binding(conn, args.repo, args.profile_id)
+    except fpmod.ProfileError as exc:
+        _print(exc.as_dict())
+        sys.exit(1)
+    finally:
+        conn.close()
+    _print(result)
+    if not result["ok"]:
+        sys.exit(1)
+
+
+def cmd_profile_verify(args):
+    result = vpmod.verify_profile(args.path)
+    _print(result)
+    if not result["ok"]:
+        sys.exit(1)
+
+
 def build_parser():
     p = argparse.ArgumentParser(prog="evidrepo", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -442,6 +558,35 @@ def build_parser():
     sp.set_defaults(fn=cmd_release_verify)
     sp = sub.add_parser("release-deliveries"); sp.add_argument("repo")
     sp.set_defaults(fn=cmd_release_deliveries)
+
+    # 格式画像
+    sp = sub.add_parser("catalog-register")
+    sp.add_argument("repo"); sp.add_argument("path")
+    sp.set_defaults(fn=cmd_catalog_register)
+    sp = sub.add_parser("catalogs"); sp.add_argument("repo")
+    sp.set_defaults(fn=cmd_catalogs)
+    sp = sub.add_parser("catalog-show")
+    sp.add_argument("repo"); sp.add_argument("catalog_id")
+    sp.add_argument("catalog_version")
+    sp.set_defaults(fn=cmd_catalog_show)
+    sp = sub.add_parser("profile-run")
+    sp.add_argument("repo"); sp.add_argument("catalog_id")
+    sp.add_argument("catalog_version")
+    scope = sp.add_mutually_exclusive_group(required=True)
+    scope.add_argument("--packages", help="逗号分隔的封存包 ID 列表")
+    scope.add_argument("--all-sealed", action="store_true",
+                       help="纳入当前全部封存包")
+    sp.set_defaults(fn=cmd_profile_run)
+    sp = sub.add_parser("profiles"); sp.add_argument("repo")
+    sp.set_defaults(fn=cmd_profiles)
+    sp = sub.add_parser("profile-show")
+    sp.add_argument("repo"); sp.add_argument("profile_id")
+    sp.set_defaults(fn=cmd_profile_show)
+    sp = sub.add_parser("profile-check-binding")
+    sp.add_argument("repo"); sp.add_argument("profile_id")
+    sp.set_defaults(fn=cmd_profile_check_binding)
+    sp = sub.add_parser("profile-verify"); sp.add_argument("path")
+    sp.set_defaults(fn=cmd_profile_verify)
     return p
 
 

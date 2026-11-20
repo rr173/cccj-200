@@ -1,0 +1,46 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-BIG"
+      },
+      "rel_path": "content/BS-BIG.bin",
+      "sha256": "a4c7b05c8bcb5900db67495ffe23c0862a5546706524de20d094de7d6c798663",
+      "size": 8388608
+    }
+  ],
+  "package_id": "BIG",
+  "representations": [
+    {
+      "filegrp": "GRP-R-BIG",
+      "id_type": "local",
+      "id_value": "R-BIG",
+      "members": [
+        [
+          "local",
+          "BS-BIG"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "n",
+          "node_id": "n"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-big"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

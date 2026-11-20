@@ -1,0 +1,3 @@
+{"record_type": "catalog_header", "format_version": "format-catalog/v1", "catalog_id": "fmt-cat", "catalog_version": "2026-11", "note": "验收目录"}
+{"record_type": "format", "format_id": "fmt.alpha", "name": "Alpha Document"}
+{"record_type": "signature", "signature_id": "sig.alpha.fixed", "format_id": "fmt.alpha", "required": [{"bytes": "414c", "offset": -1}]}

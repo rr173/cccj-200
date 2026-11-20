@@ -1,0 +1,2 @@
+{"record_type": "rules_header", "format_version": "release-rules/v1", "rules_id": "R-BIG", "audience": "aud-scale"}
+{"record_type": "rule", "bitstream": {"identifierType": "local", "identifierValue": "BIGBS"}, "action": "redact", "content_sha256": "9ce3d7fda310c9973e6cbf3df1d01cb06f5f30460f18f1a8e2ba03eda7750ce2", "ranges": [[65533, 65541], [196605, 196613]]}

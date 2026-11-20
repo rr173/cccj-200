@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-NEW"
+      },
+      "rel_path": "content/BS-NEW.bin",
+      "sha256": "cda7ef8724dc5ec895a3fb2c64742c41bcc41aefe09d0647a7d9b37934b55512",
+      "size": 405
+    }
+  ],
+  "package_id": "P6",
+  "representations": [],
+  "trusted_ingest_events": [
+    "ing-p6"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

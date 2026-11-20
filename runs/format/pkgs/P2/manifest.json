@@ -1,0 +1,86 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-BIG"
+      },
+      "rel_path": "content/BS-BIG.bin",
+      "sha256": "285bec9eef605bd1accda6745624b1a2b436bea172db9610840d3068922b9313",
+      "size": 262144
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-DUP"
+      },
+      "rel_path": "content/BS-DUP.bin",
+      "sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-ALPHA"
+      },
+      "rel_path": "content/BS-ALPHA.bin",
+      "sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-CORRUPT"
+      },
+      "rel_path": "content/BS-CORRUPT.bin",
+      "sha256": "0c53c5668cb37e4dd737a847fd3d5d6142042450e18232f3b9db75625e1a8ba0",
+      "size": 23
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-MISSING"
+      },
+      "rel_path": "content/BS-MISSING.bin",
+      "sha256": "33a783779405139ee70fd2ec9b40b0cffae6804e62f5317cfcc53c24dff0000c",
+      "size": 13
+    }
+  ],
+  "package_id": "P2",
+  "representations": [
+    {
+      "filegrp": "GRP-REP-2",
+      "id_type": "local",
+      "id_value": "REP-2",
+      "members": [
+        [
+          "local",
+          "BS-BIG"
+        ],
+        [
+          "local",
+          "BS-DUP"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-2",
+          "node_id": "node-2"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-p2"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

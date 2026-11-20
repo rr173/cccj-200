@@ -3,9 +3,9 @@
   "audience": "aud-scale",
   "files": [
     {
-      "file": "f-cd812058c98bd0160e7b3db34a83e6803cb1472d7d862d92057bd8b03cf0d130.bin",
-      "size": 8388608,
-      "sha256": "59c859796d37ca3ee88d1aa9badcf87690d252f0b338dc2ccd3302b354c7e7cb"
+      "file": "f-b6d65f1958594219945d0c441c2e9858fc101798e5bcbb4267f57d4a067414fc.bin",
+      "size": 67108864,
+      "sha256": "8033eed638a68fe66798d3b1bce116d324eaab6f5f8e6585956405292526157b"
     }
   ],
   "representations": [
@@ -13,9 +13,9 @@
       "external_code": "EXT-BIG-0001",
       "members": [
         {
-          "file": "f-cd812058c98bd0160e7b3db34a83e6803cb1472d7d862d92057bd8b03cf0d130.bin",
-          "size": 8388608,
-          "sha256": "59c859796d37ca3ee88d1aa9badcf87690d252f0b338dc2ccd3302b354c7e7cb"
+          "file": "f-b6d65f1958594219945d0c441c2e9858fc101798e5bcbb4267f57d4a067414fc.bin",
+          "size": 67108864,
+          "sha256": "8033eed638a68fe66798d3b1bce116d324eaab6f5f8e6585956405292526157b"
         }
       ]
     }

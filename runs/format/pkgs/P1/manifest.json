@@ -1,0 +1,118 @@
+{
+  "members": [
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-ALPHA"
+      },
+      "rel_path": "content/BS-ALPHA.bin",
+      "sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-ALPHA-OMEGA"
+      },
+      "rel_path": "content/BS-ALPHA-OMEGA.bin",
+      "sha256": "5830fbeee86cdc13054a6724089c0433a6e1ae115995a7bc51824c57a3025cbb",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-AMB"
+      },
+      "rel_path": "content/BS-AMB.bin",
+      "sha256": "68f2e74de564a6b0c31d846ebae7c61d163661d9871d9a4f0085af713eadc463",
+      "size": 404
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-BETA"
+      },
+      "rel_path": "content/BS-BETA.bin",
+      "sha256": "b5576d57dd490051be035f52f9ca9898450870b63dae08835069d2c55752b957",
+      "size": 404
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-GAMMA"
+      },
+      "rel_path": "content/BS-GAMMA.bin",
+      "sha256": "c9fe2be85c40dea89c4b25baa5155dfc2ff591138e507cd98274448137927189",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-DELTA-OK"
+      },
+      "rel_path": "content/BS-DELTA-OK.bin",
+      "sha256": "0d932480b9b01fbe177477b11ae11fff491377de9f59257b480d506f3d3794be",
+      "size": 405
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-DELTA-BAD"
+      },
+      "rel_path": "content/BS-DELTA-BAD.bin",
+      "sha256": "d05ffc370133283ed83987e50b128970779c2b6e16e0cd96f70962ecd8c7893b",
+      "size": 419
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-UNKNOWN"
+      },
+      "rel_path": "content/BS-UNKNOWN.bin",
+      "sha256": "110009dcee21620b166f3abfecb5eff7a873be729d1c2d53822e7acc5f34eb9b",
+      "size": 512
+    },
+    {
+      "object": {
+        "id_type": "local",
+        "id_value": "BS-EMPTY"
+      },
+      "rel_path": "content/BS-EMPTY.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  ],
+  "package_id": "P1",
+  "representations": [
+    {
+      "filegrp": "GRP-REP-1",
+      "id_type": "local",
+      "id_value": "REP-1",
+      "members": [
+        [
+          "local",
+          "BS-ALPHA"
+        ]
+      ],
+      "struct_nodes": [
+        {
+          "label": "node-1",
+          "node_id": "node-1"
+        }
+      ]
+    }
+  ],
+  "trusted_ingest_events": [
+    "ing-p1"
+  ],
+  "xml": [
+    {
+      "kind": "premis",
+      "rel_path": "metadata/premis.xml"
+    },
+    {
+      "kind": "mets",
+      "rel_path": "metadata/mets.xml"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+{"record_type": "release_header", "format_version": "release-request/v1", "request_id": "RQ", "audience": "aud"}
+{"record_type": "representation_selection", "identifierType": "local", "identifierValue": "REP-1", "external_code": "EXT-1"}

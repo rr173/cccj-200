@@ -1,0 +1,628 @@
+{
+  "content_sha256": "984504139d23ac34dab145ed20a60582e72f8440acfe4ad00ed31ff3d9b97f37",
+  "engine": "format-profile/v1",
+  "generated_at": "2026-11-20T05:43:34.409101+00:00",
+  "inputs": {
+    "catalog": {
+      "catalog_id": "fmt-cat",
+      "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+      "catalog_version": "2026-11",
+      "format_count": 5,
+      "signature_count": 10
+    },
+    "packages": {
+      "package_set": [
+        "P1"
+      ],
+      "package_set_sha256": "1ea012f63ce7253d3af8dbb22c0dc71079d087575b56223cac612bf9df0e1d93"
+    }
+  },
+  "objects": [
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-ALPHA.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 405,
+      "content_sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+      "copies": [
+        {
+          "actual_sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+          "declared_sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221",
+          "package_id": "P1",
+          "rel_path": "content/BS-ALPHA.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 405,
+          "verify_sha256": "d87eb9921c17d7b1a237a23ee1ac0e2b121ca1456a968ee3cee14f26eea93221"
+        }
+      ],
+      "formats": [
+        "fmt.alpha"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.fixed"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "mask": "ffff00ffff",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.masked"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-ALPHA",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "identified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-ALPHA-OMEGA.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 405,
+      "content_sha256": "5830fbeee86cdc13054a6724089c0433a6e1ae115995a7bc51824c57a3025cbb",
+      "copies": [
+        {
+          "actual_sha256": "5830fbeee86cdc13054a6724089c0433a6e1ae115995a7bc51824c57a3025cbb",
+          "declared_sha256": "5830fbeee86cdc13054a6724089c0433a6e1ae115995a7bc51824c57a3025cbb",
+          "package_id": "P1",
+          "rel_path": "content/BS-ALPHA-OMEGA.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 405,
+          "verify_sha256": "5830fbeee86cdc13054a6724089c0433a6e1ae115995a7bc51824c57a3025cbb"
+        }
+      ],
+      "formats": [
+        "fmt.alpha"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.fixed"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "mask": "ffff00ffff",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.masked"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            },
+            {
+              "fragment": {
+                "bytes": "4f4d454741",
+                "window": [
+                  64,
+                  192
+                ]
+              },
+              "match_count": 1,
+              "matched_bytes": "4f4d454741",
+              "offsets": [
+                100
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.multi"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-ALPHA-OMEGA",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "identified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-AMB.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 404,
+      "content_sha256": "68f2e74de564a6b0c31d846ebae7c61d163661d9871d9a4f0085af713eadc463",
+      "copies": [
+        {
+          "actual_sha256": "68f2e74de564a6b0c31d846ebae7c61d163661d9871d9a4f0085af713eadc463",
+          "declared_sha256": "68f2e74de564a6b0c31d846ebae7c61d163661d9871d9a4f0085af713eadc463",
+          "package_id": "P1",
+          "rel_path": "content/BS-AMB.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 404,
+          "verify_sha256": "68f2e74de564a6b0c31d846ebae7c61d163661d9871d9a4f0085af713eadc463"
+        }
+      ],
+      "formats": [
+        "fmt.alpha",
+        "fmt.beta"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.fixed"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.alpha",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "414c504841",
+                "mask": "ffff00ffff",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "414c504841",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.alpha.masked"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.beta",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "42455441",
+                "window": [
+                  0,
+                  256
+                ]
+              },
+              "match_count": 1,
+              "matched_bytes": "42455441",
+              "offsets": [
+                200
+              ]
+            }
+          ],
+          "signature_id": "sig.beta.window"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-AMB",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "ambiguous"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-BETA.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 404,
+      "content_sha256": "b5576d57dd490051be035f52f9ca9898450870b63dae08835069d2c55752b957",
+      "copies": [
+        {
+          "actual_sha256": "b5576d57dd490051be035f52f9ca9898450870b63dae08835069d2c55752b957",
+          "declared_sha256": "b5576d57dd490051be035f52f9ca9898450870b63dae08835069d2c55752b957",
+          "package_id": "P1",
+          "rel_path": "content/BS-BETA.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 404,
+          "verify_sha256": "b5576d57dd490051be035f52f9ca9898450870b63dae08835069d2c55752b957"
+        }
+      ],
+      "formats": [
+        "fmt.beta"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.beta",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "42455441",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "42455441",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.beta.fixed"
+        },
+        {
+          "forbidden": [],
+          "format_id": "fmt.beta",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "42455441",
+                "window": [
+                  0,
+                  256
+                ]
+              },
+              "match_count": 1,
+              "matched_bytes": "42455441",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.beta.window"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-BETA",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "identified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-DELTA-BAD.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 419,
+      "content_sha256": "d05ffc370133283ed83987e50b128970779c2b6e16e0cd96f70962ecd8c7893b",
+      "copies": [
+        {
+          "actual_sha256": "d05ffc370133283ed83987e50b128970779c2b6e16e0cd96f70962ecd8c7893b",
+          "declared_sha256": "d05ffc370133283ed83987e50b128970779c2b6e16e0cd96f70962ecd8c7893b",
+          "package_id": "P1",
+          "rel_path": "content/BS-DELTA-BAD.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 419,
+          "verify_sha256": "d05ffc370133283ed83987e50b128970779c2b6e16e0cd96f70962ecd8c7893b"
+        }
+      ],
+      "formats": [],
+      "hits": [],
+      "identifierType": "local",
+      "identifierValue": "BS-DELTA-BAD",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "unidentified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-DELTA-OK.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 405,
+      "content_sha256": "0d932480b9b01fbe177477b11ae11fff491377de9f59257b480d506f3d3794be",
+      "copies": [
+        {
+          "actual_sha256": "0d932480b9b01fbe177477b11ae11fff491377de9f59257b480d506f3d3794be",
+          "declared_sha256": "0d932480b9b01fbe177477b11ae11fff491377de9f59257b480d506f3d3794be",
+          "package_id": "P1",
+          "rel_path": "content/BS-DELTA-OK.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 405,
+          "verify_sha256": "0d932480b9b01fbe177477b11ae11fff491377de9f59257b480d506f3d3794be"
+        }
+      ],
+      "formats": [
+        "fmt.delta"
+      ],
+      "hits": [
+        {
+          "forbidden": [
+            {
+              "fragment": {
+                "bytes": "424144",
+                "window": [
+                  8,
+                  64
+                ]
+              },
+              "match_count": 0,
+              "offsets": []
+            }
+          ],
+          "format_id": "fmt.delta",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "44454c5441",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "44454c5441",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.delta.forbid"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-DELTA-OK",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "identified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-EMPTY.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copies": [
+        {
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "declared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "package_id": "P1",
+          "rel_path": "content/BS-EMPTY.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 0,
+          "verify_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "formats": [],
+      "hits": [],
+      "identifierType": "local",
+      "identifierValue": "BS-EMPTY",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "unidentified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-GAMMA.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 405,
+      "content_sha256": "c9fe2be85c40dea89c4b25baa5155dfc2ff591138e507cd98274448137927189",
+      "copies": [
+        {
+          "actual_sha256": "c9fe2be85c40dea89c4b25baa5155dfc2ff591138e507cd98274448137927189",
+          "declared_sha256": "c9fe2be85c40dea89c4b25baa5155dfc2ff591138e507cd98274448137927189",
+          "package_id": "P1",
+          "rel_path": "content/BS-GAMMA.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 405,
+          "verify_sha256": "c9fe2be85c40dea89c4b25baa5155dfc2ff591138e507cd98274448137927189"
+        }
+      ],
+      "formats": [
+        "fmt.gamma"
+      ],
+      "hits": [
+        {
+          "forbidden": [],
+          "format_id": "fmt.gamma",
+          "required": [
+            {
+              "fragment": {
+                "bytes": "47414d4d41",
+                "mask": "ff00ffffff",
+                "offset": 0
+              },
+              "match_count": 1,
+              "matched_bytes": "47584d4d41",
+              "offsets": [
+                0
+              ]
+            }
+          ],
+          "signature_id": "sig.gamma.masked"
+        }
+      ],
+      "identifierType": "local",
+      "identifierValue": "BS-GAMMA",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "identified"
+    },
+    {
+      "byte_source": {
+        "package_id": "P1",
+        "rel_path": "content/BS-UNKNOWN.bin"
+      },
+      "byte_state": "bytes_ok",
+      "catalog": {
+        "catalog_id": "fmt-cat",
+        "catalog_sha256": "9df11c8baad441686d460c1d4732bcf168ab7732259798b606119ee9e4c97b89",
+        "catalog_version": "2026-11"
+      },
+      "content_length": 512,
+      "content_sha256": "110009dcee21620b166f3abfecb5eff7a873be729d1c2d53822e7acc5f34eb9b",
+      "copies": [
+        {
+          "actual_sha256": "110009dcee21620b166f3abfecb5eff7a873be729d1c2d53822e7acc5f34eb9b",
+          "declared_sha256": "110009dcee21620b166f3abfecb5eff7a873be729d1c2d53822e7acc5f34eb9b",
+          "package_id": "P1",
+          "rel_path": "content/BS-UNKNOWN.bin",
+          "stored_state": "bytes_ok",
+          "verify": "ok",
+          "verify_length": 512,
+          "verify_sha256": "110009dcee21620b166f3abfecb5eff7a873be729d1c2d53822e7acc5f34eb9b"
+        }
+      ],
+      "formats": [],
+      "hits": [],
+      "identifierType": "local",
+      "identifierValue": "BS-UNKNOWN",
+      "package_ids": [
+        "P1"
+      ],
+      "result": "unidentified"
+    }
+  ],
+  "profile": "offline-evidence-repo/format-profile/v1",
+  "profile_id": "984504139d23ac34dab145ed20a60582e72f8440acfe4ad00ed31ff3d9b97f37",
+  "semantics": {
+    "bytes": "sealed payloads re-read and checked (length + SHA-256) before scanning; invalid bytes are never masked by signature hits",
+    "identity": "identifierType+identifierValue exact tuple; same bytes under different identities are separate records",
+    "matching": "all fully-matching signatures; identified iff all hits name one format, ambiguous iff hits name several, unidentified iff no hits",
+    "scope": "bitstream identities declared in the given sealed package set only; staging packages never enter"
+  },
+  "summary": {
+    "ambiguous": 1,
+    "by_byte_state": {
+      "bytes_corrupt": 0,
+      "bytes_missing": 0,
+      "bytes_ok": 9,
+      "identity_conflict": 0,
+      "not_received": 0
+    },
+    "bytes_invalid": 0,
+    "formats": {
+      "fmt.alpha": 2,
+      "fmt.beta": 1,
+      "fmt.delta": 1,
+      "fmt.gamma": 1
+    },
+    "identified": 5,
+    "identity_conflict": 0,
+    "objects_total": 9,
+    "unidentified": 3
+  }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:premis="http://www.loc.gov/premis/v3">
+  <mets:amdSec>
+    <mets:mdWrap ID="ADM-REP-2" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>REP-2</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>representation</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-BIG" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-BIG</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-DUP" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-DUP</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-ALPHA" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-ALPHA</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-CORRUPT" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-CORRUPT</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-MISSING" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-MISSING</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+    <mets:mdWrap ID="ADM-BS-NOTRECV" MDTYPE="PREMIS">
+      <mets:xmlData>
+        <premis:object>
+          <premis:objectIdentifier>
+            <premis:objectIdentifierType>local</premis:objectIdentifierType>
+            <premis:objectIdentifierValue>BS-NOTRECV</premis:objectIdentifierValue>
+          </premis:objectIdentifier>
+          <premis:objectCategory>bitstream</premis:objectCategory>
+        </premis:object>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp ID="GRP-REP-2" ADMID="ADM-REP-2">
+      <mets:file ID="F-BS-BIG-0" ADMID="ADM-BS-BIG">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-BIG.bin"/>
+      </mets:file>
+      <mets:file ID="F-BS-DUP-1" ADMID="ADM-BS-DUP">
+        <mets:FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="content/BS-DUP.bin"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap TYPE="physical">
+    <mets:div ID="node-2" LABEL="node-2">
+      <mets:fptr FILEID="GRP-REP-2"/>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

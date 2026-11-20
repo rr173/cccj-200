@@ -1,0 +1,90 @@
+{
+  "ambiguous_edges": [],
+  "ambiguous_obligations": [],
+  "assignments": [
+    {
+      "identity_conflict": null,
+      "item_id": "I-1",
+      "may_change_between_maximum_assignments": false,
+      "obligation_id": "OBL-1",
+      "package_id": "P1",
+      "package_ids": [
+        "P1"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "REP-1"
+      },
+      "source_line": 2,
+      "stable_across_all_maximum_assignments": true
+    }
+  ],
+  "content_sha256": "6d1751171fea09da597fbe097a01ade1003263963647919719bcaac44f956098",
+  "engine": "reconciliation/v1",
+  "extra_representations": [
+    {
+      "identity_conflict": null,
+      "package_id": "P2",
+      "package_ids": [
+        "P2"
+      ],
+      "quality": {
+        "label": "verified",
+        "reasons": []
+      },
+      "representation": {
+        "identifierType": "local",
+        "identifierValue": "REP-2"
+      }
+    }
+  ],
+  "generated_at": "2026-11-20T05:43:35.174106+00:00",
+  "identity_conflicts": [],
+  "inputs": {
+    "inventory": {
+      "format_version": "expected-inventory/v1",
+      "inventory_id": "inv-reg",
+      "item_count": 1,
+      "obligation_count": 1,
+      "source_bytes": 293,
+      "source_sha256": "ab6882f3eb1f002b6d5f30aab5d36ec41d39b9b6f47e9b93f8507c74efd53949"
+    },
+    "sealed": {
+      "package_set": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P6"
+      ],
+      "package_set_sha256": "dd65b81ef8d7cc8140c447cfe8543bed0d8ffa20f25a72746e0bdbe5199f6d4c"
+    }
+  },
+  "profile": "offline-evidence-repo/reconciliation/v1",
+  "report_id": "6d1751171fea09da597fbe097a01ade1003263963647919719bcaac44f956098",
+  "semantics": {
+    "actual_side": "sealed representation identities only",
+    "ambiguity": "alternating_reachability_plus_scc",
+    "identity": "identifierType+identifierValue exact tuple",
+    "matching": "maximum_one_to_one_bipartite",
+    "quality": "inherited from existing provenance/bytes evaluator; never promoted by reconciliation"
+  },
+  "summary": {
+    "actual_representation_identities": 2,
+    "always_satisfied": 1,
+    "ambiguous": 0,
+    "ambiguous_edges": 0,
+    "extra": 1,
+    "identity_conflicts": 0,
+    "maximum_matching_size": 1,
+    "obligation_total": 1,
+    "satisfiable_in_some_maximum_assignment": 1,
+    "satisfied": 1,
+    "unsatisfied": 0
+  },
+  "unsatisfied_obligations": []
+}

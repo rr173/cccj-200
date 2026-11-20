@@ -1,0 +1,2 @@
+{"record_type": "inventory_header", "format_version": "expected-inventory/v1", "inventory_id": "inv-reg", "batch_note": "回归"}
+{"record_type": "obligation", "item_id": "I-1", "obligation_id": "OBL-1", "acceptable_representations": [{"identifierType": "local", "identifierValue": "REP-1"}]}

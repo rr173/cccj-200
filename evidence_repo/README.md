@@ -27,6 +27,9 @@ evidence_repo/
 │   ├── release_plan.py        # 馆内计划（sealed 视图、按内容统一落实、内容寻址）
 │   ├── release_publish.py     # 批准后发布（陈旧拒绝、互斥、原子一次性交付）
 │   ├── verify_release.py      # 外发目录离线校验器（只认公开格式，不 import 仓内模块）
+│   ├── format_catalog.py      # 格式签名目录严格校验与登记（版本化 JSONL、整份事务）
+│   ├── format_profile.py      # 封存对象格式画像（区域分块扫描、不可变结果、绑定校验）
+│   ├── verify_profile.py      # 画像结果离线校验器（不重跑匹配，不 import 仓内模块）
 │   └── cli.py                 # 命令行入口
 └── tests/
     ├── fixtures.py            # 合成交接包构造器（不受信输入数据）
@@ -38,7 +41,9 @@ evidence_repo/
     ├── demo_reconcile_scale.py# 歧义双路线一致性 + 大图规模测试
     ├── demo_release_main.py   # 离线发布主演练（A馆B、别名并集、staging、陈旧重做）
     ├── demo_release_edges.py  # 发布边界（字符边界/错误分层/并发/中断/注入等 60 项）
-    └── demo_release_scale.py  # 大文件跨块遮盖 + 大量别名/区间的规模与内存
+    ├── demo_release_scale.py  # 大文件跨块遮盖 + 大量别名/区间的规模与内存
+    ├── demo_format_profile.py # 格式画像验收（独立 oracle + 人工表，87 项断言）
+    └── demo_format_profile_scale.py # 大载荷跨块扫描 + 格式/别名规模与内存
 ```
 
 ## 快速运行
@@ -56,6 +61,8 @@ python3 -I tests/demo_reconcile_scale.py # 歧义双路线一致 + 大图有界�
 python3 -I tests/demo_release_main.py    # 离线发布主例（A馆B -> A****、staging、陈旧重做）
 python3 -I tests/demo_release_edges.py   # 发布边界（60 项：错误分层/字符边界/并发/中断/注入）
 python3 -I tests/demo_release_scale.py   # 64 MiB 跨块遮盖 + 2000 别名规模与峰值内存
+python3 -I tests/demo_format_profile.py  # 格式画像验收（独立 oracle + 人工表，87 项）
+python3 -I tests/demo_format_profile_scale.py  # 64 MiB 跨块扫描 + 2000 别名/300 格式内存
 ```
 
 ## CLI 用法
@@ -88,6 +95,16 @@ python3 -m evidrepo.cli release-show <repo> <plan_id>
 python3 -m evidrepo.cli release-publish <repo> <plan_id> <new_target_dir>
 python3 -m evidrepo.cli release-verify <release_dir>   # 可在搬离仓库后运行
 python3 -m evidrepo.cli release-deliveries <repo>
+
+# 格式画像（目录登记 -> 启动画像 -> 查看结果 -> 绑定/离线校验）
+python3 -m evidrepo.cli catalog-register <repo> <catalog.jsonl>
+python3 -m evidrepo.cli catalogs <repo>
+python3 -m evidrepo.cli catalog-show <repo> <catalog_id> <catalog_version>
+python3 -m evidrepo.cli profile-run <repo> <catalog_id> <catalog_version> (--packages P1,P2 | --all-sealed)
+python3 -m evidrepo.cli profiles <repo>
+python3 -m evidrepo.cli profile-show <repo> <profile_id>
+python3 -m evidrepo.cli profile-check-binding <repo> <profile_id>
+python3 -m evidrepo.cli profile-verify <profile.json>  # 可在搬离仓库后运行
 ```
 
 ## 离线发布（offline release，profile §15）
@@ -118,6 +135,41 @@ python3 -m evidrepo.cli release-deliveries <repo>
 - **离线校验**：`release-verify` 不 import 仓内模块，搬离仓库后只按公开
   格式校验引用、文件集合与实际字节，拒绝多余/缺失文件、路径逃逸、符号链接
   与摘要错误；规则是否落实由馆内独立验收判断。
+
+## 格式画像（format profiling，profile §16）
+
+回答“**仓里有哪些文件格式、判断依据是什么、哪些对象需要人工识别**”。
+画像用于保存与盘点：不做格式转换，也不改变对象身份、谱系结论或对外
+发布许可。
+
+- **版本化目录**：`format-catalog/v1` JSONL。头记录给 `catalog_id` +
+  `catalog_version`；每条格式一行（稳定标识 + 可读名称）；每条签名
+  一行（多个必需字节片段 + 可选禁止片段）。片段支持固定偏移或有限
+  搜索窗口（≤ 1 MiB 跨度）与逐字节掩码。严格校验（头/版本/字段类型/
+  十六进制/偏移边界/掩码长度/重复标识），任一行错误整份拒绝；目录
+  行序与片段顺序不影响规范化内容摘要。
+- **范围与身份**：只纳入指定封存包集合中的 bitstream 身份（staging
+  不得进入）；按精确 `(identifierType, identifierValue)` 展开——
+  跨包重复声明只记一次，同字节不同身份分别列出，表示/结构节点不计入。
+  画像前重新读取封存载荷并核对长度与 SHA-256；缺失、损坏、身份冲突
+  不被签名命中掩盖，逐项给出状态与逐副本出处。
+- **匹配语义**：求出**所有**完整命中的签名。无命中 `unidentified`；
+  全部命中同一格式 `identified`（保留全部命中签名）；命中多个格式
+  `ambiguous`（绝不按目录顺序或首个命中静默挑选）。证据逐条指出
+  签名、片段偏移与匹配字节。汇总按精确身份去重：各格式对象数 +
+  identified/ambiguous/unidentified/无效字节/身份冲突数。
+- **不可变结果**：绑定规范化目录摘要、实际封存包集合及其清单摘要；
+  `profile_id` 内容寻址；相同输入复跑得到相同结果与稳定标识；新增
+  封包/新目录版本不改写旧结果。`profile-check-binding` 区分“当前
+  画像”与“历史画像”（旧结果仍可校验，但不能冒充当前仓画像）。
+- **离线校验**：`profile-verify` 不 import 仓内模块、不重跑格式
+  匹配，只核对内容摘要、绑定信息与汇总/证据结构自洽；结果文件可
+  搬出仓库校验。
+- **资源边界**：按片段区域分块读取（区域 ≤ 窗口跨度 + 片段长度，
+  单次 read ≤ 1 MiB），掩码编译为等价字节正则；允许按内容摘要复用
+  扫描，但每个身份独立写入、每次运行重新验证字节来源与绑定。
+  实测：64 MiB 载荷扫描峰值约 2 MiB；2000 别名 + 300 格式峰值约
+  27 MiB。
 
 ## 核心设计要点
 

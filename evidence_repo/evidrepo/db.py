@@ -15,7 +15,7 @@ import sqlite3
 
 from .util import PKG_SEALED
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 
 def connect(repo_root):
@@ -286,6 +286,62 @@ def _create(conn):
         );
         CREATE INDEX IF NOT EXISTS idx_delivery_plan
             ON release_deliveries(plan_id);
+
+        -- 格式签名目录（只增不改；整份登记或整份拒绝；规范化内容寻址）--
+        CREATE TABLE IF NOT EXISTS format_catalogs (
+            catalog_id      TEXT NOT NULL,
+            catalog_version TEXT NOT NULL,
+            catalog_sha256  TEXT NOT NULL UNIQUE,  -- 规范化内容摘要（行序无关）
+            note            TEXT NOT NULL,
+            source_sha256   TEXT NOT NULL,         -- 原始目录文件 SHA-256
+            source_bytes    INTEGER NOT NULL,
+            source_lines    INTEGER NOT NULL,
+            format_count    INTEGER NOT NULL,
+            signature_count INTEGER NOT NULL,
+            registered_at   TEXT NOT NULL,
+            stored_path     TEXT NOT NULL,         -- 仓内相对路径的原始目录副本
+            PRIMARY KEY (catalog_id, catalog_version)
+        );
+
+        -- 目录中的格式（稳定标识 + 可读名称）
+        CREATE TABLE IF NOT EXISTS catalog_formats (
+            catalog_sha256 TEXT NOT NULL,
+            format_id      TEXT NOT NULL,
+            name           TEXT NOT NULL,
+            source_line    INTEGER NOT NULL,       -- 原始 JSONL 行号（1 基）
+            PRIMARY KEY (catalog_sha256, format_id)
+        );
+
+        -- 目录中的签名（规范化 JSON 定义；片段顺序已规范化）
+        CREATE TABLE IF NOT EXISTS catalog_signatures (
+            catalog_sha256 TEXT NOT NULL,
+            signature_id   TEXT NOT NULL,
+            format_id      TEXT NOT NULL,
+            spec           TEXT NOT NULL,          -- 规范化 JSON（required/forbidden）
+            source_line    INTEGER NOT NULL,
+            PRIMARY KEY (catalog_sha256, signature_id)
+        );
+
+        -- 格式画像结果（只增不改；内容寻址；绑定目录摘要与封包集合）----
+        CREATE TABLE IF NOT EXISTS format_profiles (
+            profile_no         INTEGER PRIMARY KEY AUTOINCREMENT,
+            profile_id         TEXT NOT NULL UNIQUE,  -- 业务内容寻址
+            catalog_id         TEXT NOT NULL,
+            catalog_version    TEXT NOT NULL,
+            catalog_sha256     TEXT NOT NULL,
+            package_set_sha256 TEXT NOT NULL,
+            package_set        TEXT NOT NULL,      -- JSON 排序数组（画像范围快照）
+            created_at         TEXT NOT NULL,
+            profile_path       TEXT NOT NULL,      -- 仓内相对路径（可搬迁校验）
+            objects_total      INTEGER NOT NULL,
+            identified         INTEGER NOT NULL,
+            ambiguous          INTEGER NOT NULL,
+            unidentified       INTEGER NOT NULL,
+            bytes_invalid      INTEGER NOT NULL,
+            identity_conflict  INTEGER NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_profiles_catalog
+            ON format_profiles(catalog_sha256);
         """
     )
     cur = conn.execute("SELECT value FROM meta WHERE key='schema_version'")
@@ -310,6 +366,15 @@ def _create(conn):
     elif int(row[0]) == 2:
         # v2 -> v3：离线发布表（release_plans / release_deliveries）。
         # 既有谱系/对账数据原样保留，发布子系统独立建表。
+        conn.execute(
+            "UPDATE meta SET value=? WHERE key='schema_version'",
+            (str(SCHEMA_VERSION),),
+        )
+        conn.commit()
+    elif int(row[0]) == 3:
+        # v3 -> v4：格式画像表（format_catalogs / catalog_formats /
+        # catalog_signatures / format_profiles）。既有数据原样保留，
+        # 画像子系统独立建表（上方 CREATE IF NOT EXISTS 已建）。
         conn.execute(
             "UPDATE meta SET value=? WHERE key='schema_version'",
             (str(SCHEMA_VERSION),),

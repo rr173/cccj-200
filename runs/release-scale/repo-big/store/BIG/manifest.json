@@ -6,8 +6,8 @@
         "id_value": "BIGBS"
       },
       "rel_path": "content/BIGBS.bin",
-      "sha256": "cbb23e6fdd591197a5b50b3ea2bd2f56958cf9cd0b632c9c23b93246406152d7",
-      "size": 8388608
+      "sha256": "9ce3d7fda310c9973e6cbf3df1d01cb06f5f30460f18f1a8e2ba03eda7750ce2",
+      "size": 67108864
     }
   ],
   "package_id": "BIG",
